@@ -17,25 +17,25 @@
 
 ## 支持的动作与姿态
 
-当前黑侠定制包支持 **11 种动作与姿态**：8种真实视频动作、3种静态照片姿态。预览图取自对应交付WebM的代表帧，使用干净浅色背景；照片姿态保持静态。
+当前黑侠定制包支持 **11 种动作与姿态**：8种真实视频动作、3种静态照片姿态。视频动作使用循环GIF，直接在README中播放；3个静态照片姿态保留PNG图片，全部使用干净浅色背景。
 
 | 预览 | 动作 | 类型 | 表现 |
 | --- | --- | --- | --- |
 | <img src="pet/action-previews/idle.png" height="128" alt="黑侠待机预览"> | 待机 | 静态照片 | 歪头端坐，白胸白爪与绕在身前的黑尾。 |
-| <img src="pet/action-previews/thinking.png" height="128" alt="黑侠思考预览"> | 思考 | 真实视频 | 自然端坐，抬眼并轻轻转头。 |
+| <img src="pet/action-previews/thinking.gif" height="128" alt="黑侠思考预览"> | 思考 | GIF动图 | 自然端坐，抬眼并轻轻转头。 |
 | <img src="pet/action-previews/working.png" height="128" alt="黑侠工作预览"> | 工作 | 静态照片 | 安静的香箱卧姿，陪你认真做事。 |
-| <img src="pet/action-previews/waiting.png" height="128" alt="黑侠等你预览"> | 等你 | 真实视频 | 户外趴卧，轻抬头看向身旁。 |
-| <img src="pet/action-previews/success.png" height="128" alt="黑侠庆祝预览"> | 庆祝 | 真实视频 | 身体自然翻滚，露出白色肚皮。 |
-| <img src="pet/action-previews/sleep.png" height="128" alt="黑侠困困预览"> | 困困 | 真实视频 | 蜷卧休息，保留自然细微动作。 |
-| <img src="pet/action-previews/pet.png" height="128" alt="黑侠回应预览"> | 回应 | 真实视频 | 侧卧舒展身体与四肢。 |
-| <img src="pet/action-previews/play.png" height="128" alt="黑侠巡视预览"> | 巡视 | 真实视频 | 背向镜头，朝门口走动。 |
+| <img src="pet/action-previews/waiting.gif" height="128" alt="黑侠等你预览"> | 等你 | GIF动图 | 户外趴卧，轻抬头看向身旁。 |
+| <img src="pet/action-previews/success.gif" height="128" alt="黑侠庆祝预览"> | 庆祝 | GIF动图 | 身体自然翻滚，露出白色肚皮。 |
+| <img src="pet/action-previews/sleep.gif" height="128" alt="黑侠困困预览"> | 困困 | GIF动图 | 蜷卧休息，保留自然细微动作。 |
+| <img src="pet/action-previews/pet.gif" height="128" alt="黑侠回应预览"> | 回应 | GIF动图 | 侧卧舒展身体与四肢。 |
+| <img src="pet/action-previews/play.gif" height="128" alt="黑侠巡视预览"> | 巡视 | GIF动图 | 背向镜头，朝门口走动。 |
 | <img src="pet/action-previews/belly_rest.png" height="128" alt="黑侠仰躺揣爪预览"> | 仰躺揣爪 **新增** | 静态照片 | 仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。 |
-| <img src="pet/action-previews/wash_face.png" height="128" alt="黑侠洗脸预览"> | 洗脸 **新增** | 真实视频 | 侧卧举起白前爪，从耳侧轻擦脸颊。 |
-| <img src="pet/action-previews/tail_sway.png" height="128" alt="黑侠轻摆尾巴预览"> | 轻摆尾巴 **新增** | 真实视频 | 身体安静侧卧，尾尖自然小幅弯摆。 |
+| <img src="pet/action-previews/wash_face.gif" height="128" alt="黑侠洗脸预览"> | 洗脸 **新增** | GIF动图 | 侧卧举起白前爪，从耳侧轻擦脸颊。 |
+| <img src="pet/action-previews/tail_sway.gif" height="128" alt="黑侠轻摆尾巴预览"> | 轻摆尾巴 **新增** | GIF动图 | 身体安静侧卧，尾尖自然小幅弯摆。 |
 
 右键黑侠 → 动作，可按分类点播。洗脸位于“梳洗”，轻摆尾巴与仰躺揣爪位于“放松”。尾摆保留真实小幅动作，没有加速或放大。
 
-预览图片与对应WebM的哈希、代表帧号和裁边参数见[图片清单](pet/action-previews/preview_manifest.json)。开发时可运行 `python3 -B heixia/scripts/build_action_previews.py` 重建图片（从仓库根目录执行，需要FFmpeg）；实际WebM保持不变。
+GIF/PNG预览与对应WebM的哈希、帧数/时长、循环及裁边参数见[图片清单](pet/action-previews/preview_manifest.json)。开发时可运行 `python3 -B heixia/scripts/build_action_previews.py` 重建GIF/PNG预览（从仓库根目录执行，需要FFmpeg）；实际WebM保持不变。
 
 ## 本次新增精选
 

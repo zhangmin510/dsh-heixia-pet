@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-07T02:52:18+08:00",
+  "character": "黑侠",
+  "status": "technical_and_sampled_visual_review_passed",
+  "media_type": "VP9-alpha WebM; two still photographs and six natural video clips",
+  "items": [
+    {
+      "state": "idle",
+      "name": "待机",
+      "filename": "待机.webm",
+      "sha256": "e76e9289aebbbbc57e5ae3e8db9642bc4d9ea1aae689ca7a5b02c68ee5f35b84",
+      "bytes": 30673,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "source": {
+        "photo_id": "P0595",
+        "original_filename": "IMG_3552.HEIC",
+        "original_sha256": "83c6c98697e9b4b4340e489a9da8ef292c51cca1c796eea682d0fe49ea07a72e",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as idle; no generated body motion"
+      },
+      "working_input_sha256": "165646f0b4710c80543321af964038af554d4a264d373d76ad5586961b19af9d",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          122,
+          4,
+          334,
+          669
+        ],
+        "uniform_scale": 0.4633781763826607,
+        "display_dimensions_px": [
+          154,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 202586,
+        "all_decoded_frames_checked": 29,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "thinking",
+      "name": "思考",
+      "filename": "思考.webm",
+      "sha256": "7c1c15cecfa59cdc341b80e132dce8cc9523450dc752ba1cb89c350aede10752",
+      "bytes": 500057,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.25,
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 0.2,
+        "duration_s": 2.4
+      },
+      "working_input_sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          107,
+          126,
+          235,
+          508
+        ],
+        "uniform_scale": 0.610236220472441,
+        "display_dimensions_px": [
+          142,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 206705,
+        "all_decoded_frames_checked": 27,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "working",
+      "name": "工作",
+      "filename": "工作.webm",
+      "sha256": "9db2097ed3a1a926fced4765f4efaf2f98223a84ba017d345cb5076ca0ef33d9",
+      "bytes": 48022,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "source": {
+        "photo_id": "P0912",
+        "original_filename": "IMG_7608.JPG",
+        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as working; no generated body motion"
+      },
+      "working_input_sha256": "416700462f5088697b991dfebd16310196da415e2e1a3d86340073385ca1268e",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.44
+        ],
+        "uniform_bbox_px": [
+          136,
+          119,
+          339,
+          326
+        ],
+        "uniform_scale": 0.950920245398773,
+        "display_dimensions_px": [
+          322,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 174979,
+        "all_decoded_frames_checked": 29,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "waiting",
+      "name": "等你",
+      "filename": "等你.webm",
+      "sha256": "32b6a12e4912b5ca110b38e6ba70d09a99b58bf5ae397035e36504a7a49eb389",
+      "bytes": 532648,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.833,
+      "source": {
+        "video_id": "V026",
+        "original_filename": "IMG_6692.MOV",
+        "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
+        "start_s": 9.4,
+        "duration_s": 2.4
+      },
+      "working_input_sha256": "ed7dae7e6f7fc6360ae1f57dc491109e4770dd8d15a02b49aa5a75bed40adebe",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          264,
+          36,
+          294,
+          386
+        ],
+        "uniform_scale": 0.8031088082901554,
+        "display_dimensions_px": [
+          236,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 188481,
+        "all_decoded_frames_checked": 22,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "success",
+      "name": "庆祝",
+      "filename": "庆祝.webm",
+      "sha256": "c5718ac8ae473dc90960a6a8ce32b9305e0037e7335995287de4de28c5550630",
+      "bytes": 521040,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 4.0,
+        "duration_s": 2.4
+      },
+      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          0,
+          18,
+          576,
+          750
+        ],
+        "uniform_scale": 0.41333333333333333,
+        "display_dimensions_px": [
+          238,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 212945,
+        "all_decoded_frames_checked": 29,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "sleep",
+      "name": "困困",
+      "filename": "困困.webm",
+      "sha256": "22d2d1381261ed22530a4b28363538649dfb6d27fa31ffa8b2b685dd391d175b",
+      "bytes": 1507809,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 11.2,
+        "duration_s": 2.4
+      },
+      "working_input_sha256": "d1971daafc115e2ee2ea3616a513a00370801a8c6ed61d1aadf52ab96d4b0803",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          0,
+          230,
+          432,
+          294
+        ],
+        "uniform_scale": 1.054421768707483,
+        "display_dimensions_px": [
+          456,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 149638,
+        "all_decoded_frames_checked": 29,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "pet",
+      "name": "回应",
+      "filename": "回应.webm",
+      "sha256": "4d80d5334ce18bd719569a9977295ecbfe996d1e6790e3de33ed8d101087c3b3",
+      "bytes": 530138,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.583,
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 34.4,
+        "duration_s": 2.6
+      },
+      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "System default; exact compute hardware not asserted",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          0,
+          15,
+          576,
+          753
+        ],
+        "uniform_scale": 0.4116865869853918,
+        "display_dimensions_px": [
+          236,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 214404,
+        "all_decoded_frames_checked": 31,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "play",
+      "name": "巡视",
+      "filename": "巡视.webm",
+      "sha256": "cac34da6ea4edf699adb1ea1b9a32663dd56cebb33129f4dbcd8ae10e62a0b9c",
+      "bytes": 336445,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.833,
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 12.9,
+        "duration_s": 1.8
+      },
+      "working_input_sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
+        "configured_devices": {},
+        "focus_point": [
+          0.6,
+          0.38
+        ],
+        "uniform_bbox_px": [
+          130,
+          164,
+          279,
+          326
+        ],
+        "uniform_scale": 0.950920245398773,
+        "display_dimensions_px": [
+          264,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 204349,
+        "all_decoded_frames_checked": 22,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    }
+  ],
+  "remote_services": [],
+  "notes": [
+    "Source originals, private paths, run logs and pre-existing GIFs are not distributed.",
+    "State names are companion interface labels, not evidence of eating or human-directed behavior."
+  ],
+  "visual_review": {
+    "reviewed_clips": 8,
+    "sampled_frames": 24,
+    "report": "media_visual_review.json"
+  }
+}

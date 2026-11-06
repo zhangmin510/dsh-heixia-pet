@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "state": "idle",
+      "label": "待机",
+      "media_type": "photo",
+      "photo_id": "P0595",
+      "input": "material_review/2026-10-04/selected_working_jpeg/P0595_IMG_3552.jpg",
+      "input_sha256": "165646f0b4710c80543321af964038af554d4a264d373d76ad5586961b19af9d",
+      "photo_filename": "IMG_3552.HEIC",
+      "original_sha256": "83c6c98697e9b4b4340e489a9da8ef292c51cca1c796eea682d0fe49ea07a72e",
+      "identity": "likely"
+    },
+    {
+      "state": "thinking",
+      "label": "思考",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/15_精神抖擞.gif",
+      "input_sha256": "1ed24bf99385bf07d11f0e47081442a31a017ea8ce687c8128de53c9855b9d84",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V010.mp4",
+        "sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 0.2,
+        "duration_s": 2.4,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "state": "working",
+      "label": "工作中",
+      "media_type": "photo",
+      "photo_id": "P0912",
+      "input": "material_review/2026-10-04/previews/P0912.jpg",
+      "input_sha256": "416700462f5088697b991dfebd16310196da415e2e1a3d86340073385ca1268e",
+      "photo_filename": "IMG_7608.JPG",
+      "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.44
+      ]
+    },
+    {
+      "state": "waiting",
+      "label": "等你",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/37_你继续.gif",
+      "input_sha256": "35ec8ffc823bf775477ca0ca7f7df93f926fa950d00f5addf2f4bd1cdeab6b2e",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V026.mp4",
+        "sha256": "ed7dae7e6f7fc6360ae1f57dc491109e4770dd8d15a02b49aa5a75bed40adebe",
+        "original_filename": "IMG_6692.MOV",
+        "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
+        "start_s": 9.4,
+        "duration_s": 2.4,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely"
+    },
+    {
+      "state": "success",
+      "label": "完成/开心",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/01_打滚.gif",
+      "input_sha256": "871ae7f28e4500b73dcd7dd9f81109a5cf07938e92a990c45f08f9fffed9ce46",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V002.mp4",
+        "sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 4.0,
+        "duration_s": 2.4,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely"
+    },
+    {
+      "state": "sleep",
+      "label": "休息/睡觉",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/33_晚安.gif",
+      "input_sha256": "e504e11271ac89ead49d4e198cd0a621e3207170fc0e4376e7d7606fbe87bc94",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V024.mp4",
+        "sha256": "d1971daafc115e2ee2ea3616a513a00370801a8c6ed61d1aadf52ab96d4b0803",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 11.2,
+        "duration_s": 2.4,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely"
+    },
+    {
+      "state": "pet",
+      "label": "摸摸/回应",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/03_抱抱.gif",
+      "input_sha256": "7b4a99ba32ea7d65a1810b59bb29db3f26fa790e5e7c6d361fee7d1b4a6cacb2",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V002.mp4",
+        "sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 34.4,
+        "duration_s": 2.6,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "state": "play",
+      "label": "玩耍/探索",
+      "media_type": "video",
+      "input": "emoji_gifs/2026-11-06/gifs/17_溜了溜了.gif",
+      "input_sha256": "68f1f86e14123254564ed4f2a0ee3b00a065a29ecdffde4574d81a30df63888a",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V010.mp4",
+        "sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 12.9,
+        "duration_s": 1.8,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely",
+      "segmentation_focus": [
+        0.6,
+        0.38
+      ]
+    }
+  ]
+}

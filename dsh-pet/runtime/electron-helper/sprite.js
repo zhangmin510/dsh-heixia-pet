@@ -121,11 +121,12 @@ class PetSprite {
   }
 
   get facing() {
-    return this._facing;
+    // Real HeiXia markings are asymmetric; all playback and squash paths read this accessor.
+    return this.assetRoot === 'heixia' ? 'left' : this._facing;
   }
 
   set facing(next) {
-    const value = next === 'right' ? 'right' : 'left';
+    const value = this.assetRoot !== 'heixia' && next === 'right' ? 'right' : 'left';
     if (this._facing === value) return;
     this._facing = value;
     this.markPoseDirty();

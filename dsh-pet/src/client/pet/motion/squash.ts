@@ -20,7 +20,7 @@ export interface SquashDriver {
  * @param o - 取值函数集合：`facing` 给当前朝向，镜像要保留，所以挤压后按它复原 `transform`。
  * @returns 可反复调用的挤压驱动。
  */
-export function createSquashDriver(o: { facing: () => 'left' | 'right' }): SquashDriver {
+export function createSquashDriver(o: { facing: () => 'left' | 'right'; assetRoot?: () => string }): SquashDriver {
   /** 进行中的 rAF；`null` = 没有挤压在跑。 */
   let frame: number | null = null;
   /** 世代号：每次开始或停止都 +1，迟到的帧据此自弃。 */
@@ -46,7 +46,7 @@ export function createSquashDriver(o: { facing: () => 'left' | 'right' }): Squas
       if (token !== current) return;
       const u = Math.min((performance.now() - t0) / SQ_DURATION_MS, 1);
       const scale = squashScale(u, depth);
-      el.style.transform = (o.facing() === 'right' ? 'scaleX(-1) ' : '') + 'scaleY(' + scale + ')';
+      el.style.transform = (o.assetRoot?.() !== 'heixia' && o.facing() === 'right' ? 'scaleX(-1) ' : '') + 'scaleY(' + scale + ')';
       if (u < 1) {
         frame = requestAnimationFrame(step);
         return;
@@ -54,7 +54,7 @@ export function createSquashDriver(o: { facing: () => 'left' | 'right' }): Squas
       frame = null;
       el.style.transformOrigin = origin;
       // 恢复纯镜像；若期间换源重置过 transform，也以镜像为准。
-      el.style.transform = o.facing() === 'right' ? 'scaleX(-1)' : '';
+      el.style.transform = o.assetRoot?.() !== 'heixia' && o.facing() === 'right' ? 'scaleX(-1)' : '';
     };
     frame = requestAnimationFrame(step);
   };

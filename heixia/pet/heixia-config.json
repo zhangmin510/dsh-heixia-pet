@@ -1,0 +1,171 @@
+{
+  "pets": [
+    {
+      "id": "heixia",
+      "name": "黑侠",
+      "size": 420,
+      "sizePercent": 30,
+      "balanceEnabled": true,
+      "whisperEnabled": true,
+      "workStatusEnabled": true,
+      "fixedEnabled": true,
+      "display": "web",
+      "position": {
+        "corner": "bottom-right",
+        "marginX": 20,
+        "marginY": 140
+      }
+    }
+  ],
+  "whisperPrompt": "你是主人的黑白短毛猫，性格沉稳、好奇，偶尔傲娇，喜欢晒太阳、贴贴和等饭。陪主人写代码、做事和休息。说自然、温暖又带点猫咪俏皮的中文，每次一句，尽量20字以内，偶尔用喵，不要句句都喵。不编造真实发生的宠物经历，不声称真的在看屏幕或读懂主人心情。不要自称蓝鲸、女仆或其他角色。主人主动聊天时可以稍长回应。",
+  "animations": {
+    "idle": [
+      "待机",
+      "思考"
+    ],
+    "turn": [],
+    "drag": [
+      "回应"
+    ],
+    "clicks": [
+      "回应",
+      "庆祝"
+    ],
+    "moves": {
+      "default": {
+        "minDist": 80,
+        "maxDist": 360,
+        "margin": 20,
+        "leadSec": 0,
+        "tailSec": 0
+      },
+      "actions": []
+    },
+    "categories": [
+      {
+        "id": "日常",
+        "weight": 20,
+        "noMirror": true,
+        "actions": [
+          "等你",
+          "工作"
+        ]
+      },
+      {
+        "id": "亲近",
+        "weight": 15,
+        "noMirror": true,
+        "actions": [
+          "回应",
+          "庆祝"
+        ]
+      },
+      {
+        "id": "探索",
+        "weight": 10,
+        "noMirror": true,
+        "actions": [
+          "巡视"
+        ]
+      }
+    ],
+    "events": {
+      "balance": [
+        "庆祝",
+        "回应",
+        "待机",
+        "思考",
+        "等你",
+        "困困"
+      ],
+      "whisper": [
+        "待机",
+        "回应",
+        "思考"
+      ],
+      "workStatus": [
+        "思考",
+        "工作",
+        "待机",
+        "等你",
+        "庆祝",
+        "思考"
+      ]
+    },
+    "sleep": [
+      {
+        "start": [
+          "困困"
+        ],
+        "loop": [
+          "困困"
+        ],
+        "end": [
+          "待机"
+        ]
+      }
+    ]
+  },
+  "animationWeights": {
+    "idle": 55,
+    "turn": 0,
+    "move": 0
+  },
+  "eventsRefreshSec": {
+    "whisper": 300,
+    "sleepTalk": 600,
+    "balance": 1800
+  },
+  "whisperModel": {
+    "provider": "",
+    "model": ""
+  },
+  "chatModel": {
+    "provider": "",
+    "model": ""
+  },
+  "chatMemoryRounds": 10,
+  "whisperImageEnabled": false,
+  "chatImageEnabled": false,
+  "chatAnimationEnabled": true,
+  "voiceEnabled": false,
+  "memes": {},
+  "font": {
+    "family": "system",
+    "size": 19,
+    "followPet": true
+  },
+  "confineToScreen": true,
+  "sleepStartTexts": [
+    "给我留个暖和的位置，喵。",
+    "我先团起来眯一会。"
+  ],
+  "sleepEndTexts": [
+    "睡饱了，陪你继续。",
+    "黑侠回来啦。"
+  ],
+  "sleepRefuseTexts": [
+    "嘘，猫猫正在补觉。",
+    "再让我眯一下嘛。"
+  ],
+  "workStatusTexts": [
+    [
+      "我陪你想想。"
+    ],
+    [
+      "你忙，我也认真起来。"
+    ],
+    [
+      "理顺啦，继续。"
+    ],
+    [
+      "轮到你啦，我等着。"
+    ],
+    [
+      "做得好，奖励一个贴贴。"
+    ],
+    [
+      "别急，陪你再试一次。"
+    ]
+  ]
+}

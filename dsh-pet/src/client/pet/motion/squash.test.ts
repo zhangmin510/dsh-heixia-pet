@@ -59,6 +59,22 @@ function withFakeFrames(options: { reducedMotion?: boolean } = {}) {
 }
 
 describe('createSquashDriver —— Q 弹挤压', () => {
+  test('HeiXia remains unmirrored during click/landing squash and final restoration', () => {
+    const frames = withFakeFrames();
+    try {
+      const el = fakeVideo();
+      const driver = createSquashDriver({ facing: () => 'right', assetRoot: () => 'heixia' });
+      driver.start(el);
+      frames.tick(0);
+      assert.ok(el.style.transform.startsWith('scaleY('));
+      assert.ok(!el.style.transform.includes('scaleX(-1)'));
+      frames.tick(10_000);
+      assert.equal(el.style.transform, '', 'the final frame must not restore a mirrored face');
+    } finally {
+      frames.restore();
+    }
+  });
+
   test('逐帧压扁，结束帧复原 origin 与镜像', () => {
     const frames = withFakeFrames();
     try {

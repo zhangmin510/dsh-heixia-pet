@@ -101,7 +101,10 @@ export function createCardMotion(rt: CardMotionRuntime) {
 
     // Q 弹挤压：rAF 句柄与世代号在驱动内部，镜像按当前朝向复原。
     const squashRef = useRef<SquashDriver | null>(null);
-    squashRef.current ??= createSquashDriver({ facing: () => card.facingRef.current });
+    squashRef.current ??= createSquashDriver({
+      facing: () => card.facingRef.current,
+      assetRoot: () => cfgRef.current.assetRoot || cfgRef.current.id,
+    });
     const squash = squashRef.current;
 
     /** 当前宠物中心的视口 X 坐标。 */

@@ -1,0 +1,9 @@
+# Merge this entry into the fork's root cordis.patch.yml after exposing
+# "./heixia-quota-bridge": "./heixia/src/model-quota-bridge.js" in package exports.
+# This is a host-only contribution; dsh-pet supplies the existing browser UI.
+- insert:
+    - id: heixia-model-quota-bridge
+      name: 'dsh-pet/heixia-quota-bridge'
+      config:
+        requestTimeoutMs: 18000
+        maxMetrics: 20

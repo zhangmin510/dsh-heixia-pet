@@ -215,7 +215,8 @@ export function createOwnAnimation(deps: OwnAnimationDeps): OwnAnimation {
       front = front === 0 ? 1 : 0;
       pending = null;
       playing = cuePlaybackId;
-      el.style.transform = deps.facing() === 'right' ? 'scaleX(-1)' : '';
+      // Keep HeiXia's asymmetric real markings in the recorded orientation, including API cues.
+      el.style.transform = (deps.cfg().assetRoot || deps.cfg().id) !== 'heixia' && deps.facing() === 'right' ? 'scaleX(-1)' : '';
       el.play()
         .then(() => {
           // 只有 play() 兑现才代表确实开始出画，loadeddata 只代表可解码。

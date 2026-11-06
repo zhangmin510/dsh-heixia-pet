@@ -1,3 +1,20 @@
+# 黑侠定制版
+
+本 fork 在 [PC2005-cloud/dsh-pet](https://github.com/PC2005-cloud/dsh-pet) 的基础上，把真实黑白猫“黑侠”制作成可在 DeepSeek Harness 陪伴工作的宠物。
+
+- 8 个实拍透明动作素材，保留真实脸纹、白胸、白爪及黑尾；黑侠始终保持原拍摄方向。
+- 默认开启黑侠自动聊天、余额查询和会话状态联动；自动聊天跟随 Harness 已配置模型。
+- 通过公开接口桥接已有 `model-quota` 插件，账户、币种和套餐窗口分别显示。
+- 原始照片、视频、用户凭据和聊天记录不随仓库分发；没有复用本地喵伴项目。
+
+[安装与配置](heixia/README.md) · [宠物包](heixia/pet) · [余额桥接说明](heixia/README-quota-bridge.md)
+
+![黑侠](heixia/pet/heixia-avatar.png)
+
+以下保留上游项目介绍；上游代码与 MIT 许可证保持。
+
+---
+
 # dsh-pet 🐾
 
 <p align="center">

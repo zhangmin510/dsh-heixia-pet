@@ -154,6 +154,23 @@ function harness(overrides: Partial<OwnAnimationDeps> = {}) {
 }
 
 describe('createOwnAnimation —— 换源与回执', () => {
+  test('HeiXia API/menu right-facing cues keep the actual decoded video unmirrored', () => {
+    const h = harness({ cfg: () => ({ id: 'heixia-instance', assetRoot: 'heixia', animations }), facing: () => 'right' });
+    h.anim.switchTo('idle1', true, 'api-right-facing');
+    h.loader.requests[0].handlers.onObjectUrl('blob:heixia');
+    h.videoB.fire('loadeddata');
+    assert.equal(h.videoB.style.transform, '', 'asymmetric facial markings stay in source orientation');
+    assert.equal(h.videoB.playCalls, 1, 'the requested clip still plays');
+  });
+
+  test('ordinary pets retain right-facing mirroring at the same playback boundary', () => {
+    const h = harness({ facing: () => 'right' });
+    h.anim.switchTo('idle1', true, 'ordinary-right-facing');
+    h.loader.requests[0].handlers.onObjectUrl('blob:ordinary');
+    h.videoB.fire('loadeddata');
+    assert.equal(h.videoB.style.transform, 'scaleX(-1)');
+  });
+
   test('普通换源：目标槽位挂上 blob 地址并 load', () => {
     const h = harness();
     h.anim.switchTo('idle1', true, null);

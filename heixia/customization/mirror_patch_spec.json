@@ -1,0 +1,45 @@
+{
+  "upstream": "https://github.com/PC2005-cloud/dsh-pet",
+  "package": "dsh-pet",
+  "version": "0.4.5",
+  "source_commit": "60bb2eb4113eca92b2636ab906f8e6c9c934ae13",
+  "scope": "Only assetRoot heixia (id fallback when no root) preserves the original recorded orientation. Other pets keep upstream mirroring.",
+  "files": {
+    "lib/client.js": {
+      "before_sha256": "8977a55b4f0d2f7382ba586a9102988f419b717ce7694cb1f53755ef05eb410c",
+      "after_sha256": "c09918b39dff370191160612236ce5f4bbd2b6d768d833123df2d2dddbeefc59",
+      "replacements": [
+        [
+          "el$1.style.transform = deps.facing() === \"right\" ? \"scaleX(-1)\" : \"\";",
+          "el$1.style.transform = (deps.cfg().assetRoot || deps.cfg().id) !== \"heixia\" && deps.facing() === \"right\" ? \"scaleX(-1)\" : \"\";"
+        ],
+        [
+          "el$1.style.transform = (o.facing() === \"right\" ? \"scaleX(-1) \" : \"\") + \"scaleY(\" + scale + \")\";",
+          "el$1.style.transform = (o.assetRoot?.() !== \"heixia\" && o.facing() === \"right\" ? \"scaleX(-1) \" : \"\") + \"scaleY(\" + scale + \")\";"
+        ],
+        [
+          "el$1.style.transform = o.facing() === \"right\" ? \"scaleX(-1)\" : \"\";",
+          "el$1.style.transform = o.assetRoot?.() !== \"heixia\" && o.facing() === \"right\" ? \"scaleX(-1)\" : \"\";"
+        ],
+        [
+          "createSquashDriver({ facing: () => card.facingRef.current })",
+          "createSquashDriver({ facing: () => card.facingRef.current, assetRoot: () => cfgRef.current.assetRoot || cfgRef.current.id })"
+        ]
+      ]
+    },
+    "runtime/electron-helper/sprite.js": {
+      "before_sha256": "9b066ee8a2230b6aa66ae2d101ab3bd7cfd2d2d82647b41a69148c57cb4f776d",
+      "after_sha256": "6e14b40ab1bfd3b0076e6cc85c5a7ab8bf55dbc59e2ed842ad0a5d0d45735f56",
+      "replacements": [
+        [
+          "get facing() {\n    return this._facing;\n  }",
+          "get facing() {\n    // Real HeiXia markings are asymmetric; all playback and squash paths read this accessor.\n    return this.assetRoot === 'heixia' ? 'left' : this._facing;\n  }"
+        ],
+        [
+          "const value = next === 'right' ? 'right' : 'left';",
+          "const value = this.assetRoot !== 'heixia' && next === 'right' ? 'right' : 'left';"
+        ]
+      ]
+    }
+  }
+}

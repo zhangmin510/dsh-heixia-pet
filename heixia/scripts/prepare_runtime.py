@@ -60,7 +60,8 @@ def main():
     package_path = output / 'package.json'
     package = json.loads(package_path.read_text())
     package['exports']['./heixia-quota-bridge'] = './heixia/src/model-quota-bridge.js'
-    package['files'] = list(dict.fromkeys(package['files'] + ['heixia']))
+    package['files'] = list(dict.fromkeys(package['files'] + ['heixia', 'assets/logo.svg']))
+    package['icon'] = 'assets/logo.svg'
     package['description'] = '黑侠：基于 PC2005-cloud/dsh-pet 的真实黑白猫宠物，支持会话动作、自动聊天及模型余量桥接。'
     package['heixia'] = {'version': '1.0.0', 'fork': 'https://github.com/zhangmin510/dsh-pet',
                         'upstreamVersion': '0.4.5', 'releaseIntegrity': INTEGRITY}
@@ -72,6 +73,7 @@ def main():
     patch.write_text(patch.read_text() + "\n- insert:\n    - id: heixia-model-quota\n      name: 'dsh-pet/heixia-quota-bridge'\n")
     for name in ['logo.png', 'main-character.png']:
         shutil.copyfile(HEIXIA / 'pet/heixia-avatar.png', output / 'assets' / name)
+    shutil.copyfile(HEIXIA / 'pet/heixia-icon.svg', output / 'assets/logo.svg')
     if args.install_deps:
         subprocess.run(['npm', 'install', '--omit=dev', '--ignore-scripts', '--legacy-peer-deps',
                         '--no-audit', '--no-fund', '--package-lock=false'], cwd=output, check=True)

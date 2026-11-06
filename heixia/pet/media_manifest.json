@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-07T02:52:18+08:00",
+  "generated_at": "2026-11-07T03:35:04+08:00",
   "character": "黑侠",
   "status": "technical_and_sampled_visual_review_passed",
-  "media_type": "VP9-alpha WebM; two still photographs and six natural video clips",
+  "media_type": "VP9-alpha WebM; 3 still photograph poses and 8 natural video clips",
   "items": [
     {
       "state": "idle",
@@ -478,16 +478,198 @@
         "every_frame_has_transparency_and_foreground": true
       },
       "full_decode_passed": true
+    },
+    {
+      "state": "belly_rest",
+      "name": "仰躺揣爪",
+      "animation_name": "仰躺揣爪",
+      "filename": "仰躺揣爪.webm",
+      "sha256": "fae54671304541cd921d034945cc9ef3514eae7c4a8ec3825b3cd4f45abf6b46",
+      "bytes": 34565,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "source": {
+        "photo_id": "P0235",
+        "original_filename": "IMG_20200612_001132.jpg",
+        "original_sha256": "f7845701f8e5bda58af49022666a23d1167cec7fcd245075113e9f17107b05cc",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as belly_rest; no generated body motion"
+      },
+      "working_input_sha256": "074b717ae5d7e6bbd8ea0c6083be3d4a0a3e599f3d8cd2ab2dc526369ae52b81",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          85,
+          6,
+          471,
+          645
+        ],
+        "uniform_scale": 0.4806201550387597,
+        "display_dimensions_px": [
+          226,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 196593,
+        "all_decoded_frames_checked": 29,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "wash_face",
+      "name": "洗脸",
+      "animation_name": "洗脸",
+      "filename": "洗脸.webm",
+      "sha256": "1a2d28401c5b6fbe8bb7632f189b5a74d816189da8f0648711bb252bd186ce38",
+      "bytes": 881568,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 25.5,
+        "duration_s": 2.0
+      },
+      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          114,
+          225,
+          401,
+          376
+        ],
+        "uniform_scale": 0.824468085106383,
+        "display_dimensions_px": [
+          330,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 179155,
+        "all_decoded_frames_checked": 24,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "tail_sway",
+      "name": "轻摆尾巴",
+      "animation_name": "轻摆尾巴",
+      "filename": "轻摆尾巴.webm",
+      "sha256": "dd6dd93944c4ef237aa1dacba10ac73b07669a51fc5a112f528eb0c916e6ba5b",
+      "bytes": 736406,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.583,
+      "source": {
+        "video_id": "V028",
+        "original_filename": "IMG_6725.MOV",
+        "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
+        "start_s": 29.4,
+        "duration_s": 2.6
+      },
+      "working_input_sha256": "6749739819941032a9038b4e00c13bc82c720acdcc9587edbe21063808a31b36",
+      "processing": {
+        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
+        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
+        "configured_devices": {},
+        "focus_point": [
+          0.5,
+          0.5
+        ],
+        "uniform_bbox_px": [
+          6,
+          90,
+          416,
+          625
+        ],
+        "uniform_scale": 0.496,
+        "display_dimensions_px": [
+          206,
+          310
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330,
+          "max_cat_height": 310
+        },
+        "no_mirror": true,
+        "no_stretch": true,
+        "no_subtitles": true,
+        "no_generated_body_motion": true
+      },
+      "validation": {
+        "mode_tag": true,
+        "forced_libvpx_decode": true,
+        "minimum": 0,
+        "maximum": 255,
+        "transparent_pixels_first_frame": 198177,
+        "all_decoded_frames_checked": 31,
+        "every_frame_has_transparency_and_foreground": true
+      },
+      "full_decode_passed": true
     }
   ],
   "remote_services": [],
   "notes": [
     "Source originals, private paths, run logs and pre-existing GIFs are not distributed.",
-    "State names are companion interface labels, not evidence of eating or human-directed behavior."
+    "Photos remain static; videos preserve recorded motion without mirroring, retiming or generated body actions.",
+    "Expansion selects simple backgrounds; source/video windows and distinct behaviors are manually reviewed."
   ],
   "visual_review": {
-    "reviewed_clips": 8,
-    "sampled_frames": 24,
+    "reviewed_clips": 11,
+    "sampled_frames": 33,
     "report": "media_visual_review.json"
   }
 }

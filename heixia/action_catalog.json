@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "state": "idle",
+      "name": "待机",
+      "media_type": "photo",
+      "description": "歪头端坐，白胸白爪与绕在身前的黑尾。",
+      "behavior_key": "static_upright_sit",
+      "added_in": "initial",
+      "source": {
+        "photo_id": "P0595",
+        "original_filename": "IMG_3552.HEIC",
+        "original_sha256": "83c6c98697e9b4b4340e489a9da8ef292c51cca1c796eea682d0fe49ea07a72e",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as idle; no generated body motion"
+      },
+      "sha256": "e76e9289aebbbbc57e5ae3e8db9642bc4d9ea1aae689ca7a5b02c68ee5f35b84"
+    },
+    {
+      "state": "thinking",
+      "name": "思考",
+      "media_type": "video",
+      "description": "自然端坐，抬眼并轻轻转头。",
+      "behavior_key": "seated_head_turn",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 0.2,
+        "duration_s": 2.4
+      },
+      "sha256": "7c1c15cecfa59cdc341b80e132dce8cc9523450dc752ba1cb89c350aede10752"
+    },
+    {
+      "state": "working",
+      "name": "工作",
+      "media_type": "photo",
+      "description": "安静的香箱卧姿，陪你认真做事。",
+      "behavior_key": "static_loaf",
+      "added_in": "initial",
+      "source": {
+        "photo_id": "P0912",
+        "original_filename": "IMG_7608.JPG",
+        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as working; no generated body motion"
+      },
+      "sha256": "9db2097ed3a1a926fced4765f4efaf2f98223a84ba017d345cb5076ca0ef33d9"
+    },
+    {
+      "state": "waiting",
+      "name": "等你",
+      "media_type": "video",
+      "description": "户外趴卧，轻抬头看向身旁。",
+      "behavior_key": "prone_head_watch",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V026",
+        "original_filename": "IMG_6692.MOV",
+        "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
+        "start_s": 9.4,
+        "duration_s": 2.4
+      },
+      "sha256": "32b6a12e4912b5ca110b38e6ba70d09a99b58bf5ae397035e36504a7a49eb389"
+    },
+    {
+      "state": "success",
+      "name": "庆祝",
+      "media_type": "video",
+      "description": "身体自然翻滚，露出白色肚皮。",
+      "behavior_key": "body_roll",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 4.0,
+        "duration_s": 2.4
+      },
+      "sha256": "c5718ac8ae473dc90960a6a8ce32b9305e0037e7335995287de4de28c5550630"
+    },
+    {
+      "state": "sleep",
+      "name": "困困",
+      "media_type": "video",
+      "description": "蜷卧休息，保留自然细微动作。",
+      "behavior_key": "curled_rest",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 11.2,
+        "duration_s": 2.4
+      },
+      "sha256": "22d2d1381261ed22530a4b28363538649dfb6d27fa31ffa8b2b685dd391d175b"
+    },
+    {
+      "state": "pet",
+      "name": "回应",
+      "media_type": "video",
+      "description": "侧卧舒展身体与四肢。",
+      "behavior_key": "side_body_stretch",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 34.4,
+        "duration_s": 2.6
+      },
+      "sha256": "4d80d5334ce18bd719569a9977295ecbfe996d1e6790e3de33ed8d101087c3b3"
+    },
+    {
+      "state": "play",
+      "name": "巡视",
+      "media_type": "video",
+      "description": "背向镜头，朝门口走动。",
+      "behavior_key": "walk_away",
+      "added_in": "initial",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 12.9,
+        "duration_s": 1.8
+      },
+      "sha256": "cac34da6ea4edf699adb1ea1b9a32663dd56cebb33129f4dbcd8ae10e62a0b9c"
+    },
+    {
+      "state": "belly_rest",
+      "name": "仰躺揣爪",
+      "media_type": "photo",
+      "description": "仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。",
+      "behavior_key": "static_supine_curved_paws",
+      "added_in": "2026-11-07-expansion",
+      "source": {
+        "photo_id": "P0235",
+        "original_filename": "IMG_20200612_001132.jpg",
+        "original_sha256": "f7845701f8e5bda58af49022666a23d1167cec7fcd245075113e9f17107b05cc",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as belly_rest; no generated body motion"
+      },
+      "sha256": "fae54671304541cd921d034945cc9ef3514eae7c4a8ec3825b3cd4f45abf6b46"
+    },
+    {
+      "state": "wash_face",
+      "name": "洗脸",
+      "media_type": "video",
+      "description": "侧卧举起白前爪，从耳侧轻擦脸颊。",
+      "behavior_key": "paw_face_washing",
+      "added_in": "2026-11-07-expansion",
+      "source": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 25.5,
+        "duration_s": 2.0
+      },
+      "sha256": "1a2d28401c5b6fbe8bb7632f189b5a74d816189da8f0648711bb252bd186ce38"
+    },
+    {
+      "state": "tail_sway",
+      "name": "轻摆尾巴",
+      "media_type": "video",
+      "description": "身体安静侧卧，尾尖自然小幅弯摆。",
+      "behavior_key": "tail_tip_sway",
+      "added_in": "2026-11-07-expansion",
+      "source": {
+        "video_id": "V028",
+        "original_filename": "IMG_6725.MOV",
+        "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
+        "start_s": 29.4,
+        "duration_s": 2.6
+      },
+      "sha256": "dd6dd93944c4ef237aa1dacba10ac73b07669a51fc5a112f528eb0c916e6ba5b"
+    }
+  ]
+}

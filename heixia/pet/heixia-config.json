@@ -67,6 +67,23 @@
         "actions": [
           "巡视"
         ]
+      },
+      {
+        "id": "梳洗",
+        "weight": 12,
+        "noMirror": true,
+        "actions": [
+          "洗脸"
+        ]
+      },
+      {
+        "id": "放松",
+        "weight": 12,
+        "noMirror": true,
+        "actions": [
+          "轻摆尾巴",
+          "仰躺揣爪"
+        ]
       }
     ],
     "events": {
@@ -81,7 +98,8 @@
       "whisper": [
         "待机",
         "回应",
-        "思考"
+        "思考",
+        "轻摆尾巴"
       ],
       "workStatus": [
         "思考",

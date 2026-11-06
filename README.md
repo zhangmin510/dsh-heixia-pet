@@ -2,7 +2,7 @@
 
 本 fork 在 [PC2005-cloud/dsh-pet](https://github.com/PC2005-cloud/dsh-pet) 的基础上，把真实黑白猫“黑侠”制作成可在 DeepSeek Harness 陪伴工作的宠物。
 
-- 8 个实拍透明动作素材，保留真实脸纹、白胸、白爪及黑尾；黑侠始终保持原拍摄方向。
+- 11 个实拍透明动作与姿态素材，保留真实脸纹、白胸、白爪及黑尾；黑侠始终保持原拍摄方向。
 - 默认开启黑侠自动聊天、余额查询和会话状态联动；自动聊天跟随 Harness 已配置模型。
 - 通过公开接口桥接已有 `model-quota` 插件，账户、币种和套餐窗口分别显示。
 - 原始照片、视频、用户凭据和聊天记录不随仓库分发；没有复用本地喵伴项目。
@@ -10,6 +10,28 @@
 [安装与配置](heixia/README.md) · [宠物包](heixia/pet) · [余额桥接说明](heixia/README-quota-bridge.md)
 
 ![黑侠](heixia/pet/heixia-avatar.png)
+
+## 黑侠支持的动作与姿态
+
+当前黑侠定制包支持 **11 种动作与姿态**：8种真实视频动作、3种静态照片姿态。预览图取自对应交付WebM的代表帧，使用干净浅色背景；照片姿态保持静态。
+
+| 预览 | 动作 | 类型 | 表现 |
+| --- | --- | --- | --- |
+| <img src="heixia/pet/action-previews/idle.png" height="128" alt="黑侠待机预览"> | 待机 | 静态照片 | 歪头端坐，白胸白爪与绕在身前的黑尾。 |
+| <img src="heixia/pet/action-previews/thinking.png" height="128" alt="黑侠思考预览"> | 思考 | 真实视频 | 自然端坐，抬眼并轻轻转头。 |
+| <img src="heixia/pet/action-previews/working.png" height="128" alt="黑侠工作预览"> | 工作 | 静态照片 | 安静的香箱卧姿，陪你认真做事。 |
+| <img src="heixia/pet/action-previews/waiting.png" height="128" alt="黑侠等你预览"> | 等你 | 真实视频 | 户外趴卧，轻抬头看向身旁。 |
+| <img src="heixia/pet/action-previews/success.png" height="128" alt="黑侠庆祝预览"> | 庆祝 | 真实视频 | 身体自然翻滚，露出白色肚皮。 |
+| <img src="heixia/pet/action-previews/sleep.png" height="128" alt="黑侠困困预览"> | 困困 | 真实视频 | 蜷卧休息，保留自然细微动作。 |
+| <img src="heixia/pet/action-previews/pet.png" height="128" alt="黑侠回应预览"> | 回应 | 真实视频 | 侧卧舒展身体与四肢。 |
+| <img src="heixia/pet/action-previews/play.png" height="128" alt="黑侠巡视预览"> | 巡视 | 真实视频 | 背向镜头，朝门口走动。 |
+| <img src="heixia/pet/action-previews/belly_rest.png" height="128" alt="黑侠仰躺揣爪预览"> | 仰躺揣爪 **新增** | 静态照片 | 仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。 |
+| <img src="heixia/pet/action-previews/wash_face.png" height="128" alt="黑侠洗脸预览"> | 洗脸 **新增** | 真实视频 | 侧卧举起白前爪，从耳侧轻擦脸颊。 |
+| <img src="heixia/pet/action-previews/tail_sway.png" height="128" alt="黑侠轻摆尾巴预览"> | 轻摆尾巴 **新增** | 真实视频 | 身体安静侧卧，尾尖自然小幅弯摆。 |
+
+右键黑侠 → 动作，可按分类点播。洗脸位于“梳洗”，轻摆尾巴与仰躺揣爪位于“放松”。尾摆保留真实小幅动作，没有加速或放大。
+
+[动作预览页文件（下载后打开）](heixia/preview.html) · [动作来源清单](heixia/action_catalog.json)
 
 以下保留上游项目介绍；上游代码与 MIT 许可证保持。
 

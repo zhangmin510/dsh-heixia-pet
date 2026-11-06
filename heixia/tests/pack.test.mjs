@@ -15,7 +15,8 @@ const plugin = resolve(here, '../../dsh-pet');
 test('the actual host reader and client projection retain HeiXia and its enabled features', async () => {
   const result = await verifyPack(plugin, pack);
   assert.equal(result.petId, 'heixia');
-  assert.equal(result.mediaCount, 8);
+  assert.equal(result.mediaCount, 11);
+  for (const name of ['洗脸', '轻摆尾巴', '仰躺揣爪']) assert.ok(result.names.includes(name));
   assert.ok(result.automaticChat && result.balance);
   assert.equal(result.model.provider, '');
   assert.equal(result.model.model, '');

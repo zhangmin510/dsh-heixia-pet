@@ -146,6 +146,64 @@
         0.6,
         0.38
       ]
+    },
+    {
+      "state": "belly_rest",
+      "name": "仰躺揣爪",
+      "animation_name": "仰躺揣爪",
+      "media_type": "photo",
+      "photo_id": "P0235",
+      "input": "companion_heixia/expansion_2026-11-07/references/P0235_IMG_20200612_001132_sRGB.png",
+      "input_sha256": "074b717ae5d7e6bbd8ea0c6083be3d4a0a3e599f3d8cd2ab2dc526369ae52b81",
+      "photo_filename": "IMG_20200612_001132.jpg",
+      "original_sha256": "f7845701f8e5bda58af49022666a23d1167cec7fcd245075113e9f17107b05cc",
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "state": "wash_face",
+      "name": "洗脸",
+      "animation_name": "洗脸",
+      "media_type": "video",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V002.mp4",
+        "sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 25.5,
+        "duration_s": 2.0,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "state": "tail_sway",
+      "name": "轻摆尾巴",
+      "animation_name": "轻摆尾巴",
+      "media_type": "video",
+      "source_clip": {
+        "input": "material_review/2026-10-04/videos/playback/V028.mp4",
+        "sha256": "6749739819941032a9038b4e00c13bc82c720acdcc9587edbe21063808a31b36",
+        "original_filename": "IMG_6725.MOV",
+        "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
+        "start_s": 29.4,
+        "duration_s": 2.6,
+        "crop_normalized": null,
+        "rotation_ccw_degrees": 0
+      },
+      "identity": "likely",
+      "segmentation_focus": [
+        0.5,
+        0.5
+      ]
     }
   ]
 }

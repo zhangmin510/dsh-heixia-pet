@@ -14,6 +14,8 @@ import shutil
 import socket
 import subprocess
 import sys
+import unicodedata
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -47,6 +49,62 @@ def sha(path):
     return digest.hexdigest()
 
 
+def safe_component(value, field):
+    """Validate a literal, portable filename component before creating outputs."""
+    if not isinstance(value, str) or not value or value != value.strip():
+        raise ValueError(f'{field} must be a nonempty string without outer whitespace')
+    if len(value) > 80 or value.startswith('.') or value.endswith('.'):
+        raise ValueError(f'{field} is not a safe filename component: {value!r}')
+    if any(ch in '/\\:<>"|?*%' or unicodedata.category(ch).startswith('C') for ch in value):
+        raise ValueError(f'{field} contains a path separator, control or reserved character: {value!r}')
+    normalized = unicodedata.normalize('NFC', value).casefold()
+    reserved = {'con', 'prn', 'aux', 'nul'} | {f'{kind}{i}' for kind in ['com', 'lpt'] for i in range(1, 10)}
+    if normalized.split('.', 1)[0] in reserved:
+        raise ValueError(f'{field} uses a reserved device name: {value!r}')
+    return normalized
+
+
+def prepare_plan(plan, mode):
+    """Keep the legacy 8-state selection; explicit names opt into all items."""
+    items = plan.get('items') if isinstance(plan, dict) else None
+    if not isinstance(items, list) or not items or any(not isinstance(r, dict) for r in items):
+        raise ValueError('Plan must contain a nonempty items array')
+    seen_states = set()
+    for item in items:
+        key = safe_component(item.get('state'), 'state')
+        if key in seen_states:
+            raise ValueError(f'Duplicate state: {item["state"]!r}')
+        seen_states.add(key)
+    explicit_names = any(r.get('name') is not None or r.get('animation_name') is not None for r in items)
+    wanted = ['idle'] if mode == 'smoke_photo' else ['thinking'] if mode == 'smoke_video' else None
+    if wanted:
+        selected = [r for r in items if r['state'] in wanted]
+        if not selected and explicit_names:
+            media_type = 'photo' if mode == 'smoke_photo' else 'video'
+            selected = [r for r in items if r.get('media_type') == media_type][:1]
+    else:
+        selected = [r for r in items if explicit_names or r['state'] in NAMES]
+    if not selected or (wanted and len(selected) != 1):
+        raise ValueError(f'Plan has no unique item for {mode}')
+    if mode == 'all' and not explicit_names and len(selected) != len(NAMES):
+        raise ValueError('Legacy plan must contain the original 8 states; new actions need name/animation_name')
+    names, seen_names = {}, set()
+    for item in selected:
+        for field in ['animation_name', 'name']:
+            if item.get(field) is not None:
+                safe_component(item[field], field)
+        name = item.get('animation_name') or item.get('name') or NAMES.get(item['state'])
+        key = safe_component(name, 'animation name')
+        if name.lower().endswith('.webm'):
+            raise ValueError('Animation names must omit the .webm extension')
+        if key in seen_names:
+            raise ValueError(f'Duplicate animation filename: {name!r}')
+        if item.get('media_type') not in ['photo', 'video']:
+            raise ValueError(f'Unsupported media_type for {item["state"]}')
+        seen_names.add(key); names[item['state']] = name
+    return selected, names
+
+
 def main():
     global ROOT, COMPANION
     parser = argparse.ArgumentParser(description=__doc__)
@@ -64,14 +122,14 @@ def main():
     args = parser.parse_args()
     ROOT = args.project_root.resolve()
     COMPANION = args.output_root.resolve()
-    logs = args.logs.resolve(); logs.mkdir(parents=True, exist_ok=True)
     kind = 'smoke_photo' if args.smoke_photo else 'smoke_video' if args.smoke_video else 'all'
-    work = COMPANION / 'work/media' / kind
-    work.mkdir(parents=True, exist_ok=True)
     source_root = ROOT
     plan = json.loads(args.plan.resolve().read_text())
-    selected = [r for r in plan['items'] if r['state'] in (['idle'] if args.smoke_photo else ['thinking'] if args.smoke_video else NAMES)]
-    assert len(selected) == (1 if kind != 'all' else 8)
+    selected, names = prepare_plan(plan, kind)
+    media_counts = Counter(r['media_type'] for r in selected)
+    logs = args.logs.resolve(); logs.mkdir(parents=True, exist_ok=True)
+    work = COMPANION / 'work/media' / kind
+    work.mkdir(parents=True, exist_ok=True)
     ffmpeg, ffprobe, swiftc = [shutil.which(name) for name in ['ffmpeg', 'ffprobe', 'swiftc']]
     assert all([ffmpeg, ffprobe, swiftc]), 'FFmpeg, ffprobe and Xcode Swift required'
     run = {'pid': os.getpid(), 'started_at': now(), 'host': socket.gethostname(), 'mode': kind,
@@ -131,7 +189,7 @@ def main():
         assert sha(input_path) == expected, 'Resume input differs from selected source'
         probe, alpha, ranges = inspect_video(output_path, state)
         assert output_path.stat().st_mtime_ns == before and sha(output_path) == output_sha, 'Restored file was overwritten'
-        return {'state': state, 'name': NAMES[state], 'filename': str(output_path.relative_to(COMPANION)), 'sha256': output_sha,
+        return {'state': state, 'name': names[state], 'animation_name': names[state], 'filename': str(output_path.relative_to(COMPANION)), 'sha256': output_sha,
                 'bytes': output_path.stat().st_size, 'width':640, 'height':360, 'fps':FPS, 'duration_s':float(probe['format']['duration']),
                 'source_frames':len(sequence), 'input_path':str(input_path.relative_to(source_root)), 'input_sha256':expected, 'source':provenance,
                 'segmentation_engine':seg['engine'], 'segmentation_report':str(seg_path.relative_to(COMPANION)),
@@ -152,7 +210,7 @@ def main():
             save(signature_file, {'source_sha256': sha(source), 'binary_sha256': sha(BIN), 'built_at': now()})
         for item in selected:
             state = item['state']; folder = work / state
-            existing = COMPANION / 'pet-pack/heixia-animation' / (NAMES[state] + '.webm')
+            existing = COMPANION / 'pet-pack/heixia-animation' / (names[state] + '.webm')
             if args.resume and args.all and state in previous.get('completed', []) and previous_items.get(state) == item and existing.is_file():
                 restored = restore(item, existing, folder); results.append(restored)
                 run['completed'].append(state); save(folder/'item.json',restored); save(run_path,run)
@@ -217,7 +275,7 @@ def main():
                      '-vf', compose, '-start_number', '1', '-y', canvas / '%06d.png'], state + '_canvas')
             output_folder = COMPANION / 'pet-pack/heixia-animation' if args.all else folder
             output_folder.mkdir(parents=True, exist_ok=True)
-            output_path = output_folder / (NAMES[state] + '.webm')
+            output_path = output_folder / (names[state] + '.webm')
             input_args = ['-loop', '1', '-framerate', str(FPS), '-i', canvas / '000001.png'] if len(sequence) == 1 else ['-framerate', str(FPS), '-i', canvas / '%06d.png']
             temporary = folder / 'encoding.partial.webm'
             command([ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', *input_args,
@@ -240,7 +298,7 @@ def main():
                      '-f', 'null', '-'], state + '_full_decode')
             temporary.replace(output_path)
             assert sha(input_path) == expected, 'Read-only input was changed'
-            result = {'state': state, 'name': NAMES[state], 'filename': str(output_path.relative_to(COMPANION)),
+            result = {'state': state, 'name': names[state], 'animation_name': names[state], 'filename': str(output_path.relative_to(COMPANION)),
                       'sha256': sha(output_path), 'bytes': output_path.stat().st_size, 'width': 640, 'height': 360,
                       'fps': FPS, 'duration_s': float(probe['format']['duration']), 'source_frames': len(sequence),
                       'input_path': str(input_path.relative_to(source_root)), 'input_sha256': expected, 'source': provenance,
@@ -260,6 +318,7 @@ def main():
             print(state, output_path, result['bytes'], flush=True)
         report = {'generated_at': now(), 'mode': kind, 'status': 'technical_checks_passed_visual_review_pending',
                   'real_photo_or_video_only': True, 'remote_services': [], 'items': results,
+                  'media_counts': {'photo': media_counts['photo'], 'video': media_counts['video']},
                   'processing': 'Local Apple Vision foreground segmentation, Core Image alpha composition, fixed clip union box, FFmpeg VP9-alpha WebM'}
         destination = COMPANION / 'media_manifest.json' if args.all else work / 'smoke_manifest.json'
         save(destination, report)
@@ -268,7 +327,7 @@ def main():
             for item in results:
                 source = item['source']
                 public_items.append({
-                    'state': item['state'], 'name': item['name'], 'filename': Path(item['filename']).name,
+                    'state': item['state'], 'name': item['name'], 'animation_name': item['animation_name'], 'filename': Path(item['filename']).name,
                     'sha256': item['sha256'], 'bytes': item['bytes'], 'width': 640, 'height': 360,
                     'fps': FPS, 'duration_s': item['duration_s'],
                     'source': {k: source[k] for k in ['photo_id', 'video_id', 'original_filename', 'original_sha256', 'start_s', 'duration_s', 'motion'] if k in source},
@@ -281,14 +340,15 @@ def main():
                     'validation': item['alpha_validation'], 'full_decode_passed': item['full_decode_passed'],
                 })
             public = {'schema_version': 1, 'generated_at': now(), 'character': '黑侠', 'status': report['status'],
-                      'media_type': 'VP9-alpha WebM; two still photographs and six natural video clips',
+                      'media_type': f"VP9-alpha WebM; {media_counts['photo']} still photographs and {media_counts['video']} natural video clips",
+                      'media_counts': {'photo': media_counts['photo'], 'video': media_counts['video']},
                       'items': public_items, 'remote_services': [],
                       'notes': ['Source originals, private paths, run logs and pre-existing GIFs are not distributed.',
                                 'State names are companion interface labels, not evidence of eating or human-directed behavior.']}
             encoded = json.dumps(public, ensure_ascii=False)
             assert '/Users/' not in encoded and '/private/' not in encoded, 'Private path in public manifest'
             save(COMPANION / 'media_manifest.public.json', public)
-            public_keys = {'state','label','media_type','input','input_sha256','photo_id','photo_filename','original_sha256','identity','source_clip','segmentation_focus'}
+            public_keys = {'state','name','animation_name','label','media_type','input','input_sha256','photo_id','photo_filename','original_sha256','identity','source_clip','segmentation_focus'}
             public_plan = {'schema_version':1,'items':[{k:v for k,v in r.items() if k in public_keys} for r in selected]}
             assert '/Users/' not in json.dumps(public_plan) and '/private/' not in json.dumps(public_plan)
             save(COMPANION / 'media_plan.public.json', public_plan)

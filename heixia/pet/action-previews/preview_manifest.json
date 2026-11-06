@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-07T03:45:15+08:00",
+  "method": "Finished WebM frame decoded using libvpx-vp9; crop from verified display/canvas geometry; opaque light gray-green background",
+  "count": 11,
+  "original_media_untouched": true,
+  "background": "#eff3ed",
+  "margin_px": 16,
+  "items": [
+    {
+      "state": "idle",
+      "name": "待机",
+      "source_webm": "待机.webm",
+      "source_sha256": "e76e9289aebbbbc57e5ae3e8db9642bc4d9ea1aae689ca7a5b02c68ee5f35b84",
+      "frame_index": 0,
+      "filename": "idle.png",
+      "sha256": "45dd3e070a654dac49e6967dc7a4e4cff9ff08104f8d9ea24bb7c15972f50b8a",
+      "bytes": 58261,
+      "width": 186,
+      "height": 342,
+      "crop_px": [
+        227,
+        4,
+        186,
+        342
+      ],
+      "display_dimensions_px": [
+        154,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "thinking",
+      "name": "思考",
+      "source_webm": "思考.webm",
+      "source_sha256": "7c1c15cecfa59cdc341b80e132dce8cc9523450dc752ba1cb89c350aede10752",
+      "frame_index": 13,
+      "filename": "thinking.png",
+      "sha256": "eb7f4bfe188a87385eb4e769e1183c920774c0c4d4274b710cfbd1844b801936",
+      "bytes": 50710,
+      "width": 174,
+      "height": 342,
+      "crop_px": [
+        233,
+        4,
+        174,
+        342
+      ],
+      "display_dimensions_px": [
+        142,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "working",
+      "name": "工作",
+      "source_webm": "工作.webm",
+      "source_sha256": "9db2097ed3a1a926fced4765f4efaf2f98223a84ba017d345cb5076ca0ef33d9",
+      "frame_index": 0,
+      "filename": "working.png",
+      "sha256": "2a6c0bcd3f387ec138e17bc84b7cb1b14eff0c4a1e90fb75d80d469bfcb47714",
+      "bytes": 106468,
+      "width": 354,
+      "height": 342,
+      "crop_px": [
+        143,
+        4,
+        354,
+        342
+      ],
+      "display_dimensions_px": [
+        322,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "waiting",
+      "name": "等你",
+      "source_webm": "等你.webm",
+      "source_sha256": "32b6a12e4912b5ca110b38e6ba70d09a99b58bf5ae397035e36504a7a49eb389",
+      "frame_index": 11,
+      "filename": "waiting.png",
+      "sha256": "fd523963bb86629a1e52ae2ec5ce7b6e9d8b93e6433fc198af993c06d23fddc6",
+      "bytes": 67514,
+      "width": 268,
+      "height": 342,
+      "crop_px": [
+        186,
+        4,
+        268,
+        342
+      ],
+      "display_dimensions_px": [
+        236,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "success",
+      "name": "庆祝",
+      "source_webm": "庆祝.webm",
+      "source_sha256": "c5718ac8ae473dc90960a6a8ce32b9305e0037e7335995287de4de28c5550630",
+      "frame_index": 14,
+      "filename": "success.png",
+      "sha256": "64ebb276d9d4c80fd4c1e856d0ed3bfee864188164ecd686d9f87517f84ab373",
+      "bytes": 44753,
+      "width": 270,
+      "height": 342,
+      "crop_px": [
+        185,
+        4,
+        270,
+        342
+      ],
+      "display_dimensions_px": [
+        238,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "sleep",
+      "name": "困困",
+      "source_webm": "困困.webm",
+      "source_sha256": "22d2d1381261ed22530a4b28363538649dfb6d27fa31ffa8b2b685dd391d175b",
+      "frame_index": 14,
+      "filename": "sleep.png",
+      "sha256": "dfec8493385ada2b7f6fa06738bdd603e308e2e72b5cbd04fdf64d009a9f6072",
+      "bytes": 174235,
+      "width": 488,
+      "height": 342,
+      "crop_px": [
+        76,
+        4,
+        488,
+        342
+      ],
+      "display_dimensions_px": [
+        456,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "pet",
+      "name": "回应",
+      "source_webm": "回应.webm",
+      "source_sha256": "4d80d5334ce18bd719569a9977295ecbfe996d1e6790e3de33ed8d101087c3b3",
+      "frame_index": 15,
+      "filename": "pet.png",
+      "sha256": "43399710cc984db370a324716d2eb4db4aa041f4e1dd7cb30f7340b07d8b3a3f",
+      "bytes": 41454,
+      "width": 268,
+      "height": 342,
+      "crop_px": [
+        186,
+        4,
+        268,
+        342
+      ],
+      "display_dimensions_px": [
+        236,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "play",
+      "name": "巡视",
+      "source_webm": "巡视.webm",
+      "source_sha256": "cac34da6ea4edf699adb1ea1b9a32663dd56cebb33129f4dbcd8ae10e62a0b9c",
+      "frame_index": 11,
+      "filename": "play.png",
+      "sha256": "ca1f342223518362c3d8b9aee7f5d99c4b35b8d1564ca57df8a48f0d22f9e12b",
+      "bytes": 28782,
+      "width": 296,
+      "height": 342,
+      "crop_px": [
+        172,
+        4,
+        296,
+        342
+      ],
+      "display_dimensions_px": [
+        264,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "belly_rest",
+      "name": "仰躺揣爪",
+      "source_webm": "仰躺揣爪.webm",
+      "source_sha256": "fae54671304541cd921d034945cc9ef3514eae7c4a8ec3825b3cd4f45abf6b46",
+      "frame_index": 0,
+      "filename": "belly_rest.png",
+      "sha256": "165afaf72a3d1945c6dc9c3d2eef3c2c262c1c9504abbd3e15d5a37d5cc7e46b",
+      "bytes": 60157,
+      "width": 258,
+      "height": 342,
+      "crop_px": [
+        191,
+        4,
+        258,
+        342
+      ],
+      "display_dimensions_px": [
+        226,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "wash_face",
+      "name": "洗脸",
+      "source_webm": "洗脸.webm",
+      "source_sha256": "1a2d28401c5b6fbe8bb7632f189b5a74d816189da8f0648711bb252bd186ce38",
+      "frame_index": 12,
+      "filename": "wash_face.png",
+      "sha256": "626bfc18d526f107ac978cb638bc97187dceb097eee8ab76e3e880c3873f9067",
+      "bytes": 104838,
+      "width": 362,
+      "height": 342,
+      "crop_px": [
+        139,
+        4,
+        362,
+        342
+      ],
+      "display_dimensions_px": [
+        330,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    },
+    {
+      "state": "tail_sway",
+      "name": "轻摆尾巴",
+      "source_webm": "轻摆尾巴.webm",
+      "source_sha256": "dd6dd93944c4ef237aa1dacba10ac73b07669a51fc5a112f528eb0c916e6ba5b",
+      "frame_index": 15,
+      "filename": "tail_sway.png",
+      "sha256": "236a8693f7304727bc070479d5ef2288e551a3825fda7504ef88189569ae0ee3",
+      "bytes": 72062,
+      "width": 238,
+      "height": 342,
+      "crop_px": [
+        201,
+        4,
+        238,
+        342
+      ],
+      "display_dimensions_px": [
+        206,
+        310
+      ],
+      "feet_y": 330,
+      "margin_px": 16,
+      "background": "#eff3ed",
+      "source_sha_and_mtime_preserved": true
+    }
+  ]
+}

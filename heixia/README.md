@@ -28,13 +28,9 @@ node heixia/scripts/install-pack.mjs --plugin-dir heixia/runtime --home ~/.dsh
 
 准备脚本从 npm 获取固定 `dsh-pet@0.4.5`，核验 SHA-512 后只应用已记录的黑侠镜像补丁与余额桥接，不运行上游发布前的构建脚本；构建后的目录为 `heixia/runtime`。如已下载发布 tarball，可传 `--tarball /path/dsh-pet-0.4.5.tgz`。输出目录已存在时脚本拒绝覆盖，可用 `--output` 指定新目录。
 
-桌面应用运行时，可在 **插件管理**中安装上述 `heixia/runtime` 的绝对路径。使用命令行安装则先完全退出桌面应用，再运行：
+桌面应用请使用 **Plugins → Add plugin**，填入上述 `heixia/runtime` 的绝对路径并安装；成功后按应用提示重新加载，再在“桌宠配置”中查看黑侠。实测 Desktop 0.2.1-rc.5 的 `desktop` profile 由 Electron 应用独占管理，普通 npm 全局 CLI 会直接拒绝该 profile，退出应用也不会解除这项保护；不要手改 profile 或设置内部标记绕过。
 
-```sh
-dsh plugin --profile desktop add link:/absolute/path/to/dsh-pet/heixia/runtime
-```
-
-重开 Harness，在设置的“桌宠配置”中查看黑侠。浏览器版使用 `--profile web`，随后 `dsh web`。本地链接目录应保留。安装宠物数据只写所选 `DSH_HOME/dsh-pet/pet/heixia-*`，替换前会备份；其他宠物与宿主模型设置不改动。首次配置隐藏内置蓝鱼，只显示黑侠；已有用户自定义主宠物偏好继续生效。
+浏览器版可用 `dsh plugin --profile web add link:/absolute/path/to/dsh-pet/heixia/runtime --ignore-scripts --workspace-root`，随后 `dsh web`。本地链接目录应保留。安装宠物数据只写所选 `DSH_HOME/dsh-pet/pet/heixia-*`，替换前会备份；其他宠物与宿主模型设置不改动。首次配置隐藏内置蓝鱼，只显示黑侠；已有用户自定义主宠物偏好继续生效。
 
 要在系统桌面显示，可在上游设置中把黑侠“显示位置”改成桌面或两者；上游此模式可能需要另外准备 Electron Helper，本定制默认使用 Harness 内浮层。
 

@@ -51,18 +51,18 @@ GIF/PNG预览与对应WebM的哈希、帧数/时长、循环及裁边参数见[�
 
 ## 安装黑侠
 
+先[下载黑侠 1.1.0 安装包](https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz)。保留下载的 `.tgz` 文件，Harness 会安装其中的预构建插件。[DeepSeek Harness 官方打包与安装文档](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/develop/basic/publish.zh.md)
+
 ### 桌面版
 
-打开 DeepSeek Harness 的 **插件 → 添加插件**，粘贴这个链接，安装后按提示重新加载。黑侠会出现在 Harness 右下角。[版本发布页](https://github.com/zhangmin510/dsh-heixia-pet/releases/tag/heixia-v1.1.0)
-
-```text
-https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz
-```
+打开 **插件 → 添加插件**，粘贴下载文件的绝对路径并安装。安装后启用插件，并按应用提示重新加载。黑侠默认出现在 Harness 右下角。[官方插件管理器说明](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/client/ui-plugin-manager/README.zh.md)
 
 ### 浏览器版
 
+在下载文件所在的目录运行以下命令。
+
 ```sh
-dsh plugin --profile web add https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz
+dsh plugin --profile web add ./dsh-heixia-pet-1.1.0.tgz
 dsh web
 ```
 

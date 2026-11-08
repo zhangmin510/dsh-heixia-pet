@@ -11,13 +11,11 @@
 
 ## 安装黑侠
 
-在 DeepSeek Harness 桌面应用中打开 **插件 → 添加插件**，粘贴下方链接，安装后按提示重新加载。黑侠会出现在 Harness 右下角。
+1. [下载黑侠 1.1.0 安装包](https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz)，保留 `.tgz` 文件。
+2. 打开 DeepSeek Harness 的 **插件 → 添加插件**，粘贴下载文件的绝对路径。
+3. 安装后启用插件，并按应用提示重新加载。黑侠会出现在 Harness 右下角。
 
-```text
-https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz
-```
-
-黑侠沿用 `dsh-pet` 的插件标识。同一 profile 已安装原版时，先在插件页移除原版，再安装黑侠。[浏览器版命令与安装说明](heixia/README.md#安装黑侠)
+黑侠沿用 `dsh-pet` 的插件标识。同一 profile 已安装原版时，先在插件页移除原版，再安装黑侠。[浏览器版安装](heixia/README.md#安装黑侠) · [DeepSeek Harness 官方安装文档](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/develop/basic/publish.zh.md)
 
 ![黑侠](heixia/pet/heixia-avatar.png)
 

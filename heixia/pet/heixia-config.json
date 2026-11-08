@@ -21,15 +21,16 @@
   "animations": {
     "idle": [
       "待机",
-      "思考"
+      "看结果"
     ],
-    "turn": [],
+    "turn": [
+      "回头"
+    ],
     "drag": [
-      "回应"
+      "拎起"
     ],
     "clicks": [
-      "回应",
-      "庆祝"
+      "回应"
     ],
     "moves": {
       "default": {
@@ -44,25 +45,35 @@
     "categories": [
       {
         "id": "日常",
-        "weight": 20,
+        "weight": 30,
         "noMirror": true,
         "actions": [
-          "等你",
-          "工作"
+          "工作",
+          "看结果"
         ]
       },
       {
-        "id": "亲近",
-        "weight": 15,
+        "id": "观察",
+        "weight": 3,
         "noMirror": true,
         "actions": [
+          "思考",
+          "回头"
+        ]
+      },
+      {
+        "id": "回应",
+        "weight": 0,
+        "noMirror": true,
+        "actions": [
+          "警觉",
           "回应",
           "庆祝"
         ]
       },
       {
         "id": "探索",
-        "weight": 10,
+        "weight": 0,
         "noMirror": true,
         "actions": [
           "巡视"
@@ -70,7 +81,7 @@
       },
       {
         "id": "梳洗",
-        "weight": 12,
+        "weight": 0,
         "noMirror": true,
         "actions": [
           "洗脸"
@@ -78,55 +89,69 @@
       },
       {
         "id": "放松",
-        "weight": 12,
+        "weight": 5,
         "noMirror": true,
         "actions": [
-          "轻摆尾巴",
-          "仰躺揣爪"
+          "轻摆尾巴"
+        ]
+      },
+      {
+        "id": "静态",
+        "weight": 0,
+        "noMirror": true,
+        "actions": [
+          "仰躺揣爪",
+          "香箱"
+        ]
+      },
+      {
+        "id": "守候",
+        "weight": 0,
+        "noMirror": true,
+        "actions": [
+          "等你"
         ]
       }
     ],
     "events": {
-      "balance": [
-        "庆祝",
-        "回应",
-        "待机",
-        "思考",
-        "等你",
-        "困困"
-      ],
-      "whisper": [
-        "待机",
-        "回应",
-        "思考",
-        "轻摆尾巴"
-      ],
       "workStatus": [
         "思考",
         "工作",
-        "待机",
+        "看结果",
         "等你",
         "庆祝",
-        "思考"
+        "警觉"
+      ],
+      "balance": [
+        "回应",
+        "洗脸",
+        "轻摆尾巴",
+        "回头",
+        "仰躺揣爪",
+        "困困"
+      ],
+      "whisper": [
+        "回头",
+        "轻摆尾巴"
       ]
     },
     "sleep": [
       {
         "start": [
-          "困困"
+          "入睡"
         ],
         "loop": [
           "困困"
         ],
         "end": [
-          "待机"
+          "醒来"
         ]
       }
     ]
   },
   "animationWeights": {
-    "idle": 55,
-    "turn": 0,
+    "idle": 86,
+    "turn": 4,
     "move": 0
   },
   "eventsRefreshSec": {

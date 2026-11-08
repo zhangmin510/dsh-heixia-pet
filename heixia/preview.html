@@ -5,66 +5,121 @@
 body{margin:0}main{max-width:1200px;margin:auto;padding:52px 24px 64px}.eyebrow{font-size:13px;letter-spacing:.16em;color:#6a7e6e}h1{font-size:clamp(30px,5vw,48px);font-weight:650;margin:12px 0}
 .intro{color:#627166;line-height:1.8;max-width:750px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:28px 0 24px}button{font:inherit;font-size:14px;cursor:pointer;border:1px solid #d7dfd5;background:#fff;color:#3c5142;border-radius:22px;padding:9px 16px}button[aria-pressed=true]{background:#284f3b;color:white;border-color:#284f3b}.spacer{flex:1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}article{background:white;border:1px solid #dfe6db;border-radius:20px;overflow:hidden}article[hidden]{display:none}.stage{position:relative;background:#edf1e9;aspect-ratio:16/9}.checker .stage{background:repeating-conic-gradient(#dce4d8 0 25%,#f4f7ef 0 50%) 50%/24px 24px}video{width:100%;height:100%;object-fit:contain}.badge{position:absolute;left:14px;top:13px;background:#fffdf1;color:#547044;font-size:12px;padding:4px 10px;border-radius:14px;pointer-events:none}.caption{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between;gap:10px}h2{font-size:18px;margin:0}.caption span{font-size:12px;color:#71806e}article p{font-size:14px;line-height:1.7;color:#6c786a;margin:10px 20px 20px}footer{color:#7b8677;font-size:13px;line-height:1.8;margin-top:30px}#status{font-size:13px;color:#657961;min-height:20px}
 </style><main><div class="eyebrow">HEIXIA / 黑白小日常</div><h1>黑侠的日常</h1>
-<p class="intro">精选清楚、背景简洁的真实素材。保留黑侠原本的脸纹和自然动作。照片保持静态，视频按原动作播放。</p>
+<p class="intro">实拍片段保留原方向。循环动作检查首尾接缝，巡视和翻身按单次播放。拖拽姿态由 GPT 图片合成。</p>
 <div class="toolbar" role="group" aria-label="筛选动作">
-<button data-filter="new" aria-pressed="true">本次新增 3</button><button data-filter="all" aria-pressed="false">全部 11</button>
+<button data-filter="new" aria-pressed="true">本次新增 7</button><button data-filter="all" aria-pressed="false">全部 18</button>
 <button data-filter="video" aria-pressed="false">视频动作</button><button data-filter="photo" aria-pressed="false">静态姿态</button><span class="spacer"></span>
 <button id="play">播放当前</button><button id="pause">暂停</button><button id="background" aria-pressed="false">检查透明背景</button></div>
-<div id="status" aria-live="polite"></div><section class="grid" aria-label="黑侠动作"><article data-kind="photo" data-new="false">
-          <div class="stage"><video aria-label="待机" src="pet/heixia-animation/%E5%BE%85%E6%9C%BA.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>待机</h2><span>静态姿态</span></div>
-          <p>歪头端坐，白胸白爪与绕在身前的黑尾。</p></article>
-<article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="思考" src="pet/heixia-animation/%E6%80%9D%E8%80%83.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>思考</h2><span>真实视频</span></div>
-          <p>自然端坐，抬眼并轻轻转头。</p></article>
+<div id="status" aria-live="polite"></div><section class="grid" aria-label="黑侠动作">
 <article data-kind="photo" data-new="false">
-          <div class="stage"><video aria-label="工作" src="pet/heixia-animation/%E5%B7%A5%E4%BD%9C.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>工作</h2><span>静态姿态</span></div>
-          <p>安静的香箱卧姿，陪你认真做事。</p></article>
+  <div class="stage"><video aria-label="待机" src="pet/heixia-animation/%E5%BE%85%E6%9C%BA.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍静态</span></div>
+  <div class="caption"><h2>待机</h2><span>实拍静态</span></div>
+  <p>同机位端坐，抬眼后安静守候。</p>
+</article>
 <article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="等你" src="pet/heixia-animation/%E7%AD%89%E4%BD%A0.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>等你</h2><span>真实视频</span></div>
-          <p>户外趴卧，轻抬头看向身旁。</p></article>
+  <div class="stage"><video aria-label="思考" src="pet/heixia-animation/%E6%80%9D%E8%80%83.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍循环</span></div>
+  <div class="caption"><h2>思考</h2><span>实拍循环</span></div>
+  <p>从待机原姿态垂眼思索，再轻抬眼回正。</p>
+</article>
 <article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="庆祝" src="pet/heixia-animation/%E5%BA%86%E7%A5%9D.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>庆祝</h2><span>真实视频</span></div>
-          <p>身体自然翻滚，露出白色肚皮。</p></article>
-<article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="困困" src="pet/heixia-animation/%E5%9B%B0%E5%9B%B0.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>困困</h2><span>真实视频</span></div>
-          <p>蜷卧休息，保留自然细微动作。</p></article>
-<article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="回应" src="pet/heixia-animation/%E5%9B%9E%E5%BA%94.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>回应</h2><span>真实视频</span></div>
-          <p>侧卧舒展身体与四肢。</p></article>
-<article data-kind="video" data-new="false">
-          <div class="stage"><video aria-label="巡视" src="pet/heixia-animation/%E5%B7%A1%E8%A7%86.webm" muted loop playsinline controls preload="auto"></video>
-          </div>
-          <div class="caption"><h2>巡视</h2><span>真实视频</span></div>
-          <p>背向镜头，朝门口走动。</p></article>
+  <div class="stage"><video aria-label="工作" src="pet/heixia-animation/%E5%B7%A5%E4%BD%9C.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍循环</span></div>
+  <div class="caption"><h2>工作</h2><span>实拍循环</span></div>
+  <p>端坐看向一侧，轻微动耳，陪伴任务运行。</p>
+</article>
 <article data-kind="photo" data-new="true">
-          <div class="stage"><video aria-label="仰躺揣爪" src="pet/heixia-animation/%E4%BB%B0%E8%BA%BA%E6%8F%A3%E7%88%AA.webm" muted loop playsinline controls preload="auto"></video>
-          <span class="badge">新增</span></div>
-          <div class="caption"><h2>仰躺揣爪</h2><span>静态姿态</span></div>
-          <p>仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。</p></article>
+  <div class="stage"><video aria-label="看结果" src="pet/heixia-animation/%E7%9C%8B%E7%BB%93%E6%9E%9C.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍静态</span></div>
+  <div class="caption"><h2>看结果</h2><span>实拍静态</span></div>
+  <p>回正后专注地望向前方。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="等你" src="pet/heixia-animation/%E7%AD%89%E4%BD%A0.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍循环</span></div>
+  <div class="caption"><h2>等你</h2><span>实拍循环</span></div>
+  <p>趴卧时小幅抬眼，选相似首尾帧自然回环。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="庆祝" src="pet/heixia-animation/%E5%BA%86%E7%A5%9D.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>庆祝</h2><span>实拍单次</span></div>
+  <p>低伏侧倒，连续翻身收爪，再仰卧停稳。</p>
+</article>
 <article data-kind="video" data-new="true">
-          <div class="stage"><video aria-label="洗脸" src="pet/heixia-animation/%E6%B4%97%E8%84%B8.webm" muted loop playsinline controls preload="auto"></video>
-          <span class="badge">新增</span></div>
-          <div class="caption"><h2>洗脸</h2><span>真实视频</span></div>
-          <p>侧卧举起白前爪，从耳侧轻擦脸颊。</p></article>
+  <div class="stage"><video aria-label="警觉" src="pet/heixia-animation/%E8%AD%A6%E8%A7%89.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>警觉</h2><span>实拍单次</span></div>
+  <p>耳朵竖起，向另一侧转头，作为报错提醒。</p>
+</article>
 <article data-kind="video" data-new="true">
-          <div class="stage"><video aria-label="轻摆尾巴" src="pet/heixia-animation/%E8%BD%BB%E6%91%86%E5%B0%BE%E5%B7%B4.webm" muted loop playsinline controls preload="auto"></video>
-          <span class="badge">新增</span></div>
-          <div class="caption"><h2>轻摆尾巴</h2><span>真实视频</span></div>
-          <p>身体安静侧卧，尾尖自然小幅弯摆。</p></article></section>
+  <div class="stage"><video aria-label="入睡" src="pet/heixia-animation/%E5%85%A5%E7%9D%A1.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>入睡</h2><span>实拍单次</span></div>
+  <p>从清醒的侧卧放低头，接到睡眠循环。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="困困" src="pet/heixia-animation/%E5%9B%B0%E5%9B%B0.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍循环</span></div>
+  <div class="caption"><h2>困困</h2><span>实拍循环</span></div>
+  <p>把下巴放在爪边，保留实拍中轻微的呼吸和耳部变化。</p>
+</article>
+<article data-kind="video" data-new="true">
+  <div class="stage"><video aria-label="醒来" src="pet/heixia-animation/%E9%86%92%E6%9D%A5.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>醒来</h2><span>实拍单次</span></div>
+  <p>舔一下嘴唇，略抬起头。</p>
+</article>
+<article data-kind="photo" data-new="true">
+  <div class="stage"><video aria-label="拎起" src="pet/heixia-animation/%E6%8B%8E%E8%B5%B7.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">GPT 合成姿态</span></div>
+  <div class="caption"><h2>拎起</h2><span>GPT 合成姿态</span></div>
+  <p>前爪自然垂下，随指针移动。黑侠参考照的 GPT 合成姿态。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="回应" src="pet/heixia-animation/%E5%9B%9E%E5%BA%94.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>回应</h2><span>实拍单次</span></div>
+  <p>侧卧舒展前爪和身体，用于点击回应。</p>
+</article>
+<article data-kind="video" data-new="true">
+  <div class="stage"><video aria-label="回头" src="pet/heixia-animation/%E5%9B%9E%E5%A4%B4.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>回头</h2><span>实拍单次</span></div>
+  <p>端坐向右看一会，再转回正面。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="巡视" src="pet/heixia-animation/%E5%B7%A1%E8%A7%86.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>巡视</h2><span>实拍单次</span></div>
+  <p>背向镜头向门口走几步。</p>
+</article>
+<article data-kind="photo" data-new="false">
+  <div class="stage"><video aria-label="仰躺揣爪" src="pet/heixia-animation/%E4%BB%B0%E8%BA%BA%E6%8F%A3%E7%88%AA.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍静态</span></div>
+  <div class="caption"><h2>仰躺揣爪</h2><span>实拍静态</span></div>
+  <p>仰躺露腹，双前爪自然弯曲。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="洗脸" src="pet/heixia-animation/%E6%B4%97%E8%84%B8.webm" muted playsinline controls preload="metadata"></video>
+  <span class="badge">实拍单次</span></div>
+  <div class="caption"><h2>洗脸</h2><span>实拍单次</span></div>
+  <p>抬白前爪擦过脸颊。</p>
+</article>
+<article data-kind="video" data-new="false">
+  <div class="stage"><video aria-label="轻摆尾巴" src="pet/heixia-animation/%E8%BD%BB%E6%91%86%E5%B0%BE%E5%B7%B4.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍循环</span></div>
+  <div class="caption"><h2>轻摆尾巴</h2><span>实拍循环</span></div>
+  <p>侧卧时尾尖小幅弯摆。</p>
+</article>
+<article data-kind="photo" data-new="true">
+  <div class="stage"><video aria-label="香箱" src="pet/heixia-animation/%E9%A6%99%E7%AE%B1.webm" muted loop playsinline controls preload="metadata"></video>
+  <span class="badge">实拍静态</span></div>
+  <div class="caption"><h2>香箱</h2><span>实拍静态</span></div>
+  <p>实拍香箱卧姿，双前爪收拢。</p>
+</article>
+</section>
 <footer>照片与视频都来自黑侠已有素材；没有镜像、加速、倒放或生成新身体动作。<br>直接打开此 HTML 即可预览，请将它与旁边的素材目录一同保留。</footer></main>
 <script>
 const cards=[...document.querySelectorAll('article')],status=document.querySelector('#status');

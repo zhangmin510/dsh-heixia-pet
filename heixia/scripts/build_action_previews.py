@@ -99,10 +99,11 @@ def main():
         crop_width, crop_height = x1 - x0, y1 - y0
         validation = row.get('alpha_validation', row.get('validation', {}))
         frame_count = validation.get('all_decoded_frames_checked')
-        frame = FRAME_INDEX.get(state, int(frame_count) // 2 if frame_count else 0)
+        frame = (int(frame_count) // 2 if frame_count else 0) if 'preview' in row else (
+            FRAME_INDEX.get(state, int(frame_count) // 2 if frame_count else 0))
         if frame_count is not None and not 0 <= frame < int(frame_count):
             raise ValueError(f'Preview frame outside the verified video for {state}')
-        if 'video_id' in row.get('source', {}):
+        if row.get('preview') == 'gif' or ('preview' not in row and 'video_id' in row.get('source', {})):
             target = output_dir / (state + '.gif')
             temporary = output_dir / (state + '.partial.gif')
             # Both layers use the source timestamps, so all source frames reach
@@ -157,7 +158,7 @@ def main():
             })
             print(f'{state}: GIF {frames} frames, {duration:.3f}s, {target.stat().st_size} bytes', flush=True)
             continue
-        if 'photo_id' not in row.get('source', {}):
+        if row.get('preview') != 'png' and 'photo_id' not in row.get('source', {}):
             raise ValueError(f'Unknown photo/video source for {state}')
         target = output_dir / (state + '.png')
         temporary = output_dir / (state + '.partial.png')
@@ -169,7 +170,7 @@ def main():
             '[1:v]format=rgb24[bg];'
             '[bg][cat]overlay=shortest=1:format=auto,format=rgb24[out]'
         )
-        if not target.exists():
+        if 'preview' in row or not target.exists():
             subprocess.run(
                 [ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error',
                  '-c:v', 'libvpx-vp9', '-i', str(source),
@@ -203,7 +204,7 @@ def main():
         previews.append({
             'state': state, 'name': row['name'], 'source_webm': source.name,
             'source_sha256': expected_sha, 'frame_index': frame,
-            'media_type': 'photo', 'format': 'png', 'frame_count': 1,
+            'media_type': 'static' if 'preview' in row else 'photo', 'format': 'png', 'frame_count': 1,
             'filename': target.name, 'sha256': preview_sha, 'bytes': target.stat().st_size,
             'width': crop_width, 'height': crop_height, 'crop_px': [x0, y0, crop_width, crop_height],
             'display_dimensions_px': [width, height], 'feet_y': feet_y,
@@ -217,7 +218,7 @@ def main():
     report = {
         'schema_version': 2,
         'generated_at': datetime.now(ZoneInfo('Asia/Singapore')).isoformat(timespec='seconds'),
-        'method': 'Finished WebM decoded using libvpx-vp9; full looping GIF for video actions, unchanged PNG for existing photo poses; shared clean background and fixed crop',
+        'method': 'Finished WebM decoded using libvpx-vp9; GIF for video actions, PNG for held poses; shared clean background and fixed crop',
         'count': len(previews), 'original_media_untouched': True,
         'gif_count': sum(r['format'] == 'gif' for r in previews),
         'png_count': sum(r['format'] == 'png' for r in previews),

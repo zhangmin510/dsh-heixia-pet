@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "fps": 12,
+  "sources": {
+    "working": {
+      "height": 244,
+      "provenance": {
+        "photo_id": "P0912",
+        "original_filename": "IMG_7608.JPG",
+        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as working; no generated body motion"
+      }
+    },
+    "waiting": {
+      "height": 258,
+      "provenance": {
+        "video_id": "V026",
+        "original_filename": "IMG_6692.MOV",
+        "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
+        "start_s": 9.4,
+        "duration_s": 2.4
+      }
+    },
+    "pet": {
+      "height": 292,
+      "provenance": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 34.4,
+        "duration_s": 2.6
+      }
+    },
+    "play": {
+      "height": 281,
+      "provenance": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 12.9,
+        "duration_s": 1.8
+      }
+    },
+    "belly_rest": {
+      "height": 280,
+      "provenance": {
+        "photo_id": "P0235",
+        "original_filename": "IMG_20200612_001132.jpg",
+        "original_sha256": "f7845701f8e5bda58af49022666a23d1167cec7fcd245075113e9f17107b05cc",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as belly_rest; no generated body motion"
+      }
+    },
+    "wash_face": {
+      "height": 254,
+      "provenance": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 25.5,
+        "duration_s": 2.0
+      }
+    },
+    "tail_sway": {
+      "height": 255,
+      "provenance": {
+        "video_id": "V028",
+        "original_filename": "IMG_6725.MOV",
+        "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
+        "start_s": 29.4,
+        "duration_s": 2.6
+      }
+    },
+    "V010": {
+      "height": 282,
+      "provenance": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 0
+      },
+      "stabilize_paws": true
+    },
+    "V024": {
+      "height": 214,
+      "provenance": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 0
+      }
+    },
+    "drag": {
+      "height": 281,
+      "provenance": {
+        "type": "gpt-image",
+        "reference": "P0595",
+        "image_sha256": "c47653aaac25c0d0830345430e7ccbfe314ac7eb9977dd6dfb26a3bb8432f41f",
+        "motion": "Static lift pose combined with the pointer-driven drag motion"
+      }
+    },
+    "V002_roll": {
+      "height": 255,
+      "provenance": {
+        "video_id": "V002",
+        "original_filename": "IMG_3971.MOV",
+        "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
+        "start_s": 13.45
+      }
+    }
+  },
+  "items": [
+    {
+      "state": "idle",
+      "name": "待机",
+      "source": "V010",
+      "frames": [
+        26,
+        26
+      ],
+      "playback": "hold",
+      "description": "同机位端坐，抬眼后安静守候。"
+    },
+    {
+      "state": "thinking",
+      "name": "思考",
+      "source": "V010",
+      "frames": [
+        3,
+        26
+      ],
+      "playback": "return",
+      "description": "从待机原姿态垂眼思索，再轻抬眼回正。",
+      "start_at_end": true
+    },
+    {
+      "state": "working",
+      "name": "工作",
+      "source": "V010",
+      "frames": [
+        53,
+        72
+      ],
+      "playback": "return",
+      "description": "端坐看向一侧，轻微动耳，陪伴任务运行。"
+    },
+    {
+      "state": "result",
+      "name": "看结果",
+      "source": "V010",
+      "frames": [
+        110,
+        110
+      ],
+      "playback": "hold",
+      "description": "回正后专注地望向前方。"
+    },
+    {
+      "state": "waiting",
+      "name": "等你",
+      "source": "waiting",
+      "frames": [
+        16,
+        28
+      ],
+      "playback": "loop",
+      "description": "趴卧时小幅抬眼，选相似首尾帧自然回环。"
+    },
+    {
+      "state": "success",
+      "name": "庆祝",
+      "source": "V002_roll",
+      "frames": [
+        1,
+        27
+      ],
+      "playback": "once",
+      "description": "低伏侧倒，连续翻身收爪，再仰卧停稳。"
+    },
+    {
+      "state": "alert",
+      "name": "警觉",
+      "source": "V010",
+      "frames": [
+        111,
+        124
+      ],
+      "playback": "once",
+      "description": "耳朵竖起，向另一侧转头，作为报错提醒。"
+    },
+    {
+      "state": "sleep_enter",
+      "name": "入睡",
+      "source": "V024",
+      "frames": [
+        143,
+        153
+      ],
+      "playback": "once",
+      "description": "从清醒的侧卧放低头，接到睡眠循环。"
+    },
+    {
+      "state": "sleep",
+      "name": "困困",
+      "source": "V024",
+      "frames": [
+        159,
+        166
+      ],
+      "playback": "return",
+      "description": "把下巴放在爪边，保留实拍中轻微的呼吸和耳部变化。"
+    },
+    {
+      "state": "sleep_wake",
+      "name": "醒来",
+      "source": "V024",
+      "frames": [
+        39,
+        55
+      ],
+      "playback": "once",
+      "description": "舔一下嘴唇，略抬起头。"
+    },
+    {
+      "state": "drag",
+      "name": "拎起",
+      "source": "drag",
+      "frames": [
+        1,
+        1
+      ],
+      "playback": "hold",
+      "description": "前爪自然垂下，随指针移动。黑侠参考照的 GPT 合成姿态。"
+    },
+    {
+      "state": "pet",
+      "name": "回应",
+      "source": "pet",
+      "frames": [
+        14,
+        31
+      ],
+      "playback": "once",
+      "description": "侧卧舒展前爪和身体，用于点击回应。"
+    },
+    {
+      "state": "turn",
+      "name": "回头",
+      "source": "V010",
+      "frames": [
+        27,
+        110
+      ],
+      "playback": "once",
+      "description": "端坐向右看一会，再转回正面。"
+    },
+    {
+      "state": "play",
+      "name": "巡视",
+      "source": "play",
+      "frames": [
+        1,
+        22
+      ],
+      "playback": "once",
+      "description": "背向镜头向门口走几步。"
+    },
+    {
+      "state": "belly_rest",
+      "name": "仰躺揣爪",
+      "source": "belly_rest",
+      "frames": [
+        1,
+        1
+      ],
+      "playback": "hold",
+      "description": "仰躺露腹，双前爪自然弯曲。"
+    },
+    {
+      "state": "wash_face",
+      "name": "洗脸",
+      "source": "wash_face",
+      "frames": [
+        5,
+        21
+      ],
+      "playback": "once",
+      "description": "抬白前爪擦过脸颊。"
+    },
+    {
+      "state": "tail_sway",
+      "name": "轻摆尾巴",
+      "source": "tail_sway",
+      "frames": [
+        1,
+        13
+      ],
+      "playback": "return",
+      "description": "侧卧时尾尖小幅弯摆。"
+    },
+    {
+      "state": "loaf",
+      "name": "香箱",
+      "source": "working",
+      "frames": [
+        1,
+        1
+      ],
+      "playback": "hold",
+      "description": "实拍香箱卧姿，双前爪收拢。"
+    }
+  ]
+}

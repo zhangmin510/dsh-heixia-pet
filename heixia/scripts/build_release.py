@@ -31,9 +31,10 @@ def main():
         package = json.loads(manifest.read_text())
         version = package['heixia']['version']
         # The host/client module IDs and profile settings are shared with upstream.
-        package['version'] = '0.4.5-heixia.1'
+        package['version'] = '0.4.5-heixia.2'
         package['homepage'] = REPOSITORY
         package['repository']['url'] = f'git+{REPOSITORY}.git'
+        package['repository']['directory'] = 'dsh-pet'
         package['bugs']['url'] = f'{REPOSITORY}/issues'
         # Use system fonts without redistributing the upstream third-party TTF.
         package['files'].remove('assets/fonts')
@@ -46,7 +47,7 @@ def main():
         readme = runtime / 'README.md'
         upstream_readme = readme.read_text()
         readme.write_text(f'# 黑侠 · DeepSeek Harness 宠物\n\n'
-                          f'黑侠 {version}，包含 11 个动作与姿态。\n\n'
+                          f'黑侠 {version}，包含 {bundled["animationCount"]} 个动作与姿态。\n\n'
                           f'[安装说明与版本发布]({REPOSITORY}/releases)\n\n'
                           f'## 上游项目与许可\n\n{upstream_readme}')
         filename = f'dsh-heixia-pet-{version}.tgz'

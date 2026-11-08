@@ -2,7 +2,7 @@
 
 本 fork 在 [PC2005-cloud/dsh-pet](https://github.com/PC2005-cloud/dsh-pet) 的基础上，把真实黑白猫“黑侠”制作成可在 DeepSeek Harness 陪伴工作的宠物。
 
-- 11 个实拍透明动作与姿态素材，保留真实脸纹、白胸、白爪及黑尾；黑侠始终保持原拍摄方向。
+- 18 个动作与姿态，其中 17 个来自实拍。「拎起」是唯一使用 GPT 图片合成的姿态。
 - 默认开启黑侠自动聊天、余额查询和会话状态联动；自动聊天跟随 Harness 已配置模型。
 - 通过公开接口桥接已有 `model-quota` 插件，账户、币种和套餐窗口分别显示。
 - 原始照片、视频、用户凭据和聊天记录不随仓库分发；没有复用本地喵伴项目。
@@ -11,7 +11,7 @@
 
 ## 安装黑侠
 
-1. [下载黑侠 1.1.0 安装包](https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz)，保留 `.tgz` 文件。
+1. [下载黑侠 1.2.0 安装包](https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.2.0/dsh-heixia-pet-1.2.0.tgz)，保留 `.tgz` 文件。
 2. 打开 DeepSeek Harness 的 **插件 → 添加插件**，粘贴下载文件的绝对路径。
 3. 安装后启用插件，并按应用提示重新加载。黑侠会出现在 Harness 右下角。
 
@@ -21,25 +21,32 @@
 
 ## 黑侠支持的动作与姿态
 
-当前黑侠定制包支持 **11 种动作与姿态**：8种真实视频动作、3种静态照片姿态。视频动作使用循环GIF，直接在README中播放；3个静态照片姿态保留PNG图片，全部使用干净浅色背景。
+黑侠 1.2.0 包含 18 个动作与姿态。13 个实拍动作用 GIF 预览，5 个静态姿态用 PNG，其中「拎起」来自 GPT 图片合成。
 
-| 预览 | 动作 | 类型 | 表现 |
+待机、思考、工作、看结果、警觉和回头共用同一实拍机位与前爪落点。睡眠三段使用同一侧卧机位。巡视和翻身按原方向完整播一次，持续状态只用相近首尾或可回程的小动作。不同实拍机位用短淡入淡出衔接，开启系统减少动态效果时直接切换。
+
+| 预览 | 动作 | 播放方式 | 表现 |
 | --- | --- | --- | --- |
-| <img src="heixia/pet/action-previews/idle.png" height="128" alt="黑侠待机预览"> | 待机 | 静态照片 | 歪头端坐，白胸白爪与绕在身前的黑尾。 |
-| <img src="heixia/pet/action-previews/thinking.gif" height="128" alt="黑侠思考预览"> | 思考 | GIF动图 | 自然端坐，抬眼并轻轻转头。 |
-| <img src="heixia/pet/action-previews/working.png" height="128" alt="黑侠工作预览"> | 工作 | 静态照片 | 安静的香箱卧姿，陪你认真做事。 |
-| <img src="heixia/pet/action-previews/waiting.gif" height="128" alt="黑侠等你预览"> | 等你 | GIF动图 | 户外趴卧，轻抬头看向身旁。 |
-| <img src="heixia/pet/action-previews/success.gif" height="128" alt="黑侠庆祝预览"> | 庆祝 | GIF动图 | 身体自然翻滚，露出白色肚皮。 |
-| <img src="heixia/pet/action-previews/sleep.gif" height="128" alt="黑侠困困预览"> | 困困 | GIF动图 | 蜷卧休息，保留自然细微动作。 |
-| <img src="heixia/pet/action-previews/pet.gif" height="128" alt="黑侠回应预览"> | 回应 | GIF动图 | 侧卧舒展身体与四肢。 |
-| <img src="heixia/pet/action-previews/play.gif" height="128" alt="黑侠巡视预览"> | 巡视 | GIF动图 | 背向镜头，朝门口走动。 |
-| <img src="heixia/pet/action-previews/belly_rest.png" height="128" alt="黑侠仰躺揣爪预览"> | 仰躺揣爪 **新增** | 静态照片 | 仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。 |
-| <img src="heixia/pet/action-previews/wash_face.gif" height="128" alt="黑侠洗脸预览"> | 洗脸 **新增** | GIF动图 | 侧卧举起白前爪，从耳侧轻擦脸颊。 |
-| <img src="heixia/pet/action-previews/tail_sway.gif" height="128" alt="黑侠轻摆尾巴预览"> | 轻摆尾巴 **新增** | GIF动图 | 身体安静侧卧，尾尖自然小幅弯摆。 |
+| <img src="heixia/pet/action-previews/idle.png" height="118" alt="待机预览"> | 待机 | 实拍静态 | 同机位端坐，抬眼后安静守候。 |
+| <img src="heixia/pet/action-previews/thinking.gif" height="118" alt="思考预览"> | 思考 | 实拍循环 | 从待机原姿态垂眼思索，再轻抬眼回正。 |
+| <img src="heixia/pet/action-previews/working.gif" height="118" alt="工作预览"> | 工作 | 实拍循环 | 端坐看向一侧，轻微动耳，陪伴任务运行。 |
+| <img src="heixia/pet/action-previews/result.png" height="118" alt="看结果预览"> | 看结果 | 实拍静态 | 回正后专注地望向前方。 |
+| <img src="heixia/pet/action-previews/waiting.gif" height="118" alt="等你预览"> | 等你 | 实拍循环 | 趴卧时小幅抬眼，选相似首尾帧自然回环。 |
+| <img src="heixia/pet/action-previews/success.gif" height="118" alt="庆祝预览"> | 庆祝 | 实拍单次 | 低伏侧倒，连续翻身收爪，再仰卧停稳。 |
+| <img src="heixia/pet/action-previews/alert.gif" height="118" alt="警觉预览"> | 警觉 | 实拍单次 | 耳朵竖起，向另一侧转头，作为报错提醒。 |
+| <img src="heixia/pet/action-previews/sleep_enter.gif" height="118" alt="入睡预览"> | 入睡 | 实拍单次 | 从清醒的侧卧放低头，接到睡眠循环。 |
+| <img src="heixia/pet/action-previews/sleep.gif" height="118" alt="困困预览"> | 困困 | 实拍循环 | 把下巴放在爪边，保留实拍中轻微的呼吸和耳部变化。 |
+| <img src="heixia/pet/action-previews/sleep_wake.gif" height="118" alt="醒来预览"> | 醒来 | 实拍单次 | 舔一下嘴唇，略抬起头。 |
+| <img src="heixia/pet/action-previews/drag.png" height="118" alt="拎起预览"> | 拎起 | GPT 合成姿态 | 前爪自然垂下，随指针移动。黑侠参考照的 GPT 合成姿态。 |
+| <img src="heixia/pet/action-previews/pet.gif" height="118" alt="回应预览"> | 回应 | 实拍单次 | 侧卧舒展前爪和身体，用于点击回应。 |
+| <img src="heixia/pet/action-previews/turn.gif" height="118" alt="回头预览"> | 回头 | 实拍单次 | 端坐向右看一会，再转回正面。 |
+| <img src="heixia/pet/action-previews/play.gif" height="118" alt="巡视预览"> | 巡视 | 实拍单次 | 背向镜头向门口走几步。 |
+| <img src="heixia/pet/action-previews/belly_rest.png" height="118" alt="仰躺揣爪预览"> | 仰躺揣爪 | 实拍静态 | 仰躺露腹，双前爪自然弯曲。 |
+| <img src="heixia/pet/action-previews/wash_face.gif" height="118" alt="洗脸预览"> | 洗脸 | 实拍单次 | 抬白前爪擦过脸颊。 |
+| <img src="heixia/pet/action-previews/tail_sway.gif" height="118" alt="轻摆尾巴预览"> | 轻摆尾巴 | 实拍循环 | 侧卧时尾尖小幅弯摆。 |
+| <img src="heixia/pet/action-previews/loaf.png" height="118" alt="香箱预览"> | 香箱 | 实拍静态 | 实拍香箱卧姿，双前爪收拢。 |
 
-右键黑侠 → 动作，可按分类点播。洗脸位于“梳洗”，轻摆尾巴与仰躺揣爪位于“放松”。尾摆保留真实小幅动作，没有加速或放大。
-
-[动作预览页文件（下载后打开）](heixia/preview.html) · [动作来源清单](heixia/action_catalog.json)
+[场景与动作对应表](heixia/README.md#场景与动作) · [动作预览页文件（下载后打开）](heixia/preview.html) · [动作来源清单](heixia/action_catalog.json)
 
 以下保留上游项目介绍；上游代码与 MIT 许可证保持。
 

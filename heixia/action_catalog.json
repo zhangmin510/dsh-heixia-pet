@@ -1,143 +1,221 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "items": [
     {
       "state": "idle",
       "name": "待机",
-      "media_type": "photo",
-      "description": "歪头端坐，白胸白爪与绕在身前的黑尾。",
-      "behavior_key": "static_upright_sit",
-      "added_in": "initial",
-      "source": {
-        "photo_id": "P0595",
-        "original_filename": "IMG_3552.HEIC",
-        "original_sha256": "83c6c98697e9b4b4340e489a9da8ef292c51cca1c796eea682d0fe49ea07a72e",
-        "start_s": null,
-        "duration_s": 2.4,
-        "motion": "Still photograph held as idle; no generated body motion"
-      },
-      "sha256": "e76e9289aebbbbc57e5ae3e8db9642bc4d9ea1aae689ca7a5b02c68ee5f35b84"
-    },
-    {
-      "state": "thinking",
-      "name": "思考",
-      "media_type": "video",
-      "description": "自然端坐，抬眼并轻轻转头。",
-      "behavior_key": "seated_head_turn",
-      "added_in": "initial",
+      "media_type": "实拍静态",
+      "description": "同机位端坐，抬眼后安静守候。",
+      "playback": "hold",
       "source": {
         "video_id": "V010",
         "original_filename": "IMG_5269.MOV",
         "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
-        "start_s": 0.2,
-        "duration_s": 2.4
+        "start_s": 2.0833,
+        "duration_s": 0.0833
       },
-      "sha256": "7c1c15cecfa59cdc341b80e132dce8cc9523450dc752ba1cb89c350aede10752"
+      "sha256": "67e62d5bf25604354e1f4ab48cb1081639744f4b8296d662456d14e43dde513e"
+    },
+    {
+      "state": "thinking",
+      "name": "思考",
+      "media_type": "实拍循环",
+      "description": "从待机原姿态垂眼思索，再轻抬眼回正。",
+      "playback": "return",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 0.1667,
+        "duration_s": 2.0
+      },
+      "sha256": "d62f19531fcd49da5418b04f7e297ccead7a011ee5358863c05497ab214df267"
     },
     {
       "state": "working",
       "name": "工作",
-      "media_type": "photo",
-      "description": "安静的香箱卧姿，陪你认真做事。",
-      "behavior_key": "static_loaf",
-      "added_in": "initial",
+      "media_type": "实拍循环",
+      "description": "端坐看向一侧，轻微动耳，陪伴任务运行。",
+      "playback": "return",
       "source": {
-        "photo_id": "P0912",
-        "original_filename": "IMG_7608.JPG",
-        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
-        "start_s": null,
-        "duration_s": 2.4,
-        "motion": "Still photograph held as working; no generated body motion"
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 4.3333,
+        "duration_s": 1.6667
       },
-      "sha256": "9db2097ed3a1a926fced4765f4efaf2f98223a84ba017d345cb5076ca0ef33d9"
+      "sha256": "50219b7f98c8fe864c544fb9083ceed965f541a13585c9f2ed260f3e874d96d2"
+    },
+    {
+      "state": "result",
+      "name": "看结果",
+      "media_type": "实拍静态",
+      "description": "回正后专注地望向前方。",
+      "playback": "hold",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 9.0833,
+        "duration_s": 0.0833
+      },
+      "sha256": "aa975e659c7c85662b8fd66ad682056e0bb0eacad0dcb0e3d91af9c5137e8d16"
     },
     {
       "state": "waiting",
       "name": "等你",
-      "media_type": "video",
-      "description": "户外趴卧，轻抬头看向身旁。",
-      "behavior_key": "prone_head_watch",
-      "added_in": "initial",
+      "media_type": "实拍循环",
+      "description": "趴卧时小幅抬眼，选相似首尾帧自然回环。",
+      "playback": "loop",
       "source": {
         "video_id": "V026",
         "original_filename": "IMG_6692.MOV",
         "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
-        "start_s": 9.4,
-        "duration_s": 2.4
+        "start_s": 10.65,
+        "duration_s": 1.0833
       },
-      "sha256": "32b6a12e4912b5ca110b38e6ba70d09a99b58bf5ae397035e36504a7a49eb389"
+      "sha256": "0d81c6124c1c275e40b96ccca01ea8eece141d6198109b19bdfa40288b753e47"
     },
     {
       "state": "success",
       "name": "庆祝",
-      "media_type": "video",
-      "description": "身体自然翻滚，露出白色肚皮。",
-      "behavior_key": "body_roll",
-      "added_in": "initial",
+      "media_type": "实拍单次",
+      "description": "低伏侧倒，连续翻身收爪，再仰卧停稳。",
+      "playback": "once",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 4.0,
-        "duration_s": 2.4
+        "start_s": 13.45,
+        "duration_s": 2.25
       },
-      "sha256": "c5718ac8ae473dc90960a6a8ce32b9305e0037e7335995287de4de28c5550630"
+      "sha256": "27d8d946e0d287c7c3c8f3082678ab24f9f45dba854d0bf6ce94f90d355aa584"
     },
     {
-      "state": "sleep",
-      "name": "困困",
-      "media_type": "video",
-      "description": "蜷卧休息，保留自然细微动作。",
-      "behavior_key": "curled_rest",
-      "added_in": "initial",
+      "state": "alert",
+      "name": "警觉",
+      "media_type": "实拍单次",
+      "description": "耳朵竖起，向另一侧转头，作为报错提醒。",
+      "playback": "once",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 9.1667,
+        "duration_s": 1.1667
+      },
+      "sha256": "80572caa933e6a4fd1bf296d27d2d3f2cf5ea793592c74d36c71a756683572a7"
+    },
+    {
+      "state": "sleep_enter",
+      "name": "入睡",
+      "media_type": "实拍单次",
+      "description": "从清醒的侧卧放低头，接到睡眠循环。",
+      "playback": "once",
       "source": {
         "video_id": "V024",
         "original_filename": "IMG_6674.MOV",
         "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
-        "start_s": 11.2,
-        "duration_s": 2.4
+        "start_s": 11.8333,
+        "duration_s": 0.9167
       },
-      "sha256": "22d2d1381261ed22530a4b28363538649dfb6d27fa31ffa8b2b685dd391d175b"
+      "sha256": "238ce454aa6a11b82bab932ce757acf4082ea7511c2197312beef180d4a96408"
+    },
+    {
+      "state": "sleep",
+      "name": "困困",
+      "media_type": "实拍循环",
+      "description": "把下巴放在爪边，保留实拍中轻微的呼吸和耳部变化。",
+      "playback": "return",
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 13.1667,
+        "duration_s": 0.6667
+      },
+      "sha256": "4ba1f1b9d743e6f236a3018b1d569c90281b63178b3fc1b3687c6ad43e967c9e"
+    },
+    {
+      "state": "sleep_wake",
+      "name": "醒来",
+      "media_type": "实拍单次",
+      "description": "舔一下嘴唇，略抬起头。",
+      "playback": "once",
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 3.1667,
+        "duration_s": 1.4167
+      },
+      "sha256": "d416fdbfbc5fef52a1dc2c835ae17223a762efbfa7503a137f064af73f11561d"
+    },
+    {
+      "state": "drag",
+      "name": "拎起",
+      "media_type": "GPT 合成姿态",
+      "description": "前爪自然垂下，随指针移动。黑侠参考照的 GPT 合成姿态。",
+      "playback": "hold",
+      "source": {
+        "type": "gpt-image",
+        "reference": "P0595",
+        "image_sha256": "c47653aaac25c0d0830345430e7ccbfe314ac7eb9977dd6dfb26a3bb8432f41f",
+        "motion": "Static lift pose combined with the pointer-driven drag motion"
+      },
+      "sha256": "e2396606e7c4541ad1647331b153695b430ddc40c6fd2efc5363c998680eb5f3"
     },
     {
       "state": "pet",
       "name": "回应",
-      "media_type": "video",
-      "description": "侧卧舒展身体与四肢。",
-      "behavior_key": "side_body_stretch",
-      "added_in": "initial",
+      "media_type": "实拍单次",
+      "description": "侧卧舒展前爪和身体，用于点击回应。",
+      "playback": "once",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 34.4,
-        "duration_s": 2.6
+        "start_s": 35.4833,
+        "duration_s": 1.5
       },
-      "sha256": "4d80d5334ce18bd719569a9977295ecbfe996d1e6790e3de33ed8d101087c3b3"
+      "sha256": "6c68546ae8843adebda5212c5f644f1ce611d6172b125e5fe7987a6cffbcc4d4"
+    },
+    {
+      "state": "turn",
+      "name": "回头",
+      "media_type": "实拍单次",
+      "description": "端坐向右看一会，再转回正面。",
+      "playback": "once",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 2.1667,
+        "duration_s": 7.0
+      },
+      "sha256": "cba848d51372a24fb3c3a6db8176bb3808a2f1266402b6110d64b4a09a71ede8"
     },
     {
       "state": "play",
       "name": "巡视",
-      "media_type": "video",
-      "description": "背向镜头，朝门口走动。",
-      "behavior_key": "walk_away",
-      "added_in": "initial",
+      "media_type": "实拍单次",
+      "description": "背向镜头向门口走几步。",
+      "playback": "once",
       "source": {
         "video_id": "V010",
         "original_filename": "IMG_5269.MOV",
         "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
         "start_s": 12.9,
-        "duration_s": 1.8
+        "duration_s": 1.8333
       },
-      "sha256": "cac34da6ea4edf699adb1ea1b9a32663dd56cebb33129f4dbcd8ae10e62a0b9c"
+      "sha256": "0a1d0f4c6b1b0223a99717288d240b60714fa9e9e99cee98d706f2c7a03c0cd9"
     },
     {
       "state": "belly_rest",
       "name": "仰躺揣爪",
-      "media_type": "photo",
-      "description": "仰躺露腹，双前爪自然弯曲；保留照片的静态姿态。",
-      "behavior_key": "static_supine_curved_paws",
-      "added_in": "2026-11-07-expansion",
+      "media_type": "实拍静态",
+      "description": "仰躺露腹，双前爪自然弯曲。",
+      "playback": "hold",
       "source": {
         "photo_id": "P0235",
         "original_filename": "IMG_20200612_001132.jpg",
@@ -146,39 +224,53 @@
         "duration_s": 2.4,
         "motion": "Still photograph held as belly_rest; no generated body motion"
       },
-      "sha256": "fae54671304541cd921d034945cc9ef3514eae7c4a8ec3825b3cd4f45abf6b46"
+      "sha256": "b5d3b406c247355fe093d775d84f75415be5d5fa7a8efcc5016d00a4b529092a"
     },
     {
       "state": "wash_face",
       "name": "洗脸",
-      "media_type": "video",
-      "description": "侧卧举起白前爪，从耳侧轻擦脸颊。",
-      "behavior_key": "paw_face_washing",
-      "added_in": "2026-11-07-expansion",
+      "media_type": "实拍单次",
+      "description": "抬白前爪擦过脸颊。",
+      "playback": "once",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 25.5,
-        "duration_s": 2.0
+        "start_s": 25.8333,
+        "duration_s": 1.4167
       },
-      "sha256": "1a2d28401c5b6fbe8bb7632f189b5a74d816189da8f0648711bb252bd186ce38"
+      "sha256": "615eb6e1646766f806ae3aa9e074a1dc83c35ab4a79fe7652c95e6bd40c24a8a"
     },
     {
       "state": "tail_sway",
       "name": "轻摆尾巴",
-      "media_type": "video",
-      "description": "身体安静侧卧，尾尖自然小幅弯摆。",
-      "behavior_key": "tail_tip_sway",
-      "added_in": "2026-11-07-expansion",
+      "media_type": "实拍循环",
+      "description": "侧卧时尾尖小幅弯摆。",
+      "playback": "return",
       "source": {
         "video_id": "V028",
         "original_filename": "IMG_6725.MOV",
         "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
         "start_s": 29.4,
-        "duration_s": 2.6
+        "duration_s": 1.0833
       },
-      "sha256": "dd6dd93944c4ef237aa1dacba10ac73b07669a51fc5a112f528eb0c916e6ba5b"
+      "sha256": "d2f596a153f7c9effec8b5e2dcbae601a41106df8a5384a4ae410b5d262f5817"
+    },
+    {
+      "state": "loaf",
+      "name": "香箱",
+      "media_type": "实拍静态",
+      "description": "实拍香箱卧姿，双前爪收拢。",
+      "playback": "hold",
+      "source": {
+        "photo_id": "P0912",
+        "original_filename": "IMG_7608.JPG",
+        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as working; no generated body motion"
+      },
+      "sha256": "f0510125b0af459ab79004a7cdff7392ec6a34d5e45d413164e2067fd55362fc"
     }
   ]
 }

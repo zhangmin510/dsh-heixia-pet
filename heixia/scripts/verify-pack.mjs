@@ -44,7 +44,20 @@ export async function verifyPack(pluginDir, packDir) {
     assert.equal(pet.whisperEnabled, true);
     assert.equal(pet.balanceEnabled, true);
     assert.equal(pet.workStatusEnabled, true);
-    assert.equal(pet.animations.events.workStatus.length, 6);
+    const animations = pet.animations;
+    assert.equal(animations.events.workStatus.length, 6);
+    assert.equal(new Set(animations.events.workStatus.flat()).size, 6, 'Work states need distinct cues');
+    assert.equal(animations.events.balance.length, 6);
+    assert.ok(animations.events.whisper.length, 'Missing speech cue');
+    for (const key of ['idle', 'turn', 'drag', 'clicks']) {
+      assert.ok(animations[key].length, `Missing action pool: ${key}`);
+    }
+    assert.ok(animations.sleep?.length, 'Missing sleep set');
+    for (const { start, loop, end } of animations.sleep) {
+      assert.ok(start.length && loop.length && end.length, 'Sleep needs three playable phases');
+      const phases = [...start, ...loop, ...end];
+      assert.equal(new Set(phases).size, phases.length, 'Sleep phases must be distinct');
+    }
     const names = animationNames(source.animations);
     assert.ok(names.length >= 8, 'Expected eight distinct real-media actions');
     for (const name of names) {

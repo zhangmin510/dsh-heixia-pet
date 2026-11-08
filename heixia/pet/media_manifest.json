@@ -1,67 +1,49 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-11-07T03:35:04+08:00",
+  "schema_version": 3,
   "character": "黑侠",
-  "status": "technical_and_sampled_visual_review_passed",
-  "media_type": "VP9-alpha WebM; 3 still photograph poses and 8 natural video clips",
+  "generated_at": "2026-11-09T00:04:35+08:00",
   "items": [
     {
       "state": "idle",
       "name": "待机",
       "filename": "待机.webm",
-      "sha256": "e76e9289aebbbbc57e5ae3e8db9642bc4d9ea1aae689ca7a5b02c68ee5f35b84",
-      "bytes": 30673,
+      "description": "同机位端坐，抬眼后安静守候。",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 2.0833,
+        "duration_s": 0.0833
+      },
+      "source_frames": [
+        26,
+        26
+      ],
+      "sha256": "67e62d5bf25604354e1f4ab48cb1081639744f4b8296d662456d14e43dde513e",
+      "bytes": 25888,
       "width": 640,
       "height": 360,
       "fps": 12,
-      "duration_s": 2.416,
-      "source": {
-        "photo_id": "P0595",
-        "original_filename": "IMG_3552.HEIC",
-        "original_sha256": "83c6c98697e9b4b4340e489a9da8ef292c51cca1c796eea682d0fe49ea07a72e",
-        "start_s": null,
-        "duration_s": 2.4,
-        "motion": "Still photograph held as idle; no generated body motion"
-      },
-      "working_input_sha256": "165646f0b4710c80543321af964038af554d4a264d373d76ad5586961b19af9d",
+      "duration_s": 2.0,
+      "playback": "hold",
+      "preview": "png",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          122,
-          4,
-          334,
-          669
-        ],
-        "uniform_scale": 0.4633781763826607,
         "display_dimensions_px": [
-          154,
-          310
+          164,
+          282
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.0,
+        "peak_adjacent_rgb_delta_0_255": 0.0
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 202586,
-        "all_decoded_frames_checked": 29,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -69,58 +51,43 @@
       "state": "thinking",
       "name": "思考",
       "filename": "思考.webm",
-      "sha256": "7c1c15cecfa59cdc341b80e132dce8cc9523450dc752ba1cb89c350aede10752",
-      "bytes": 500057,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.25,
+      "description": "从待机原姿态垂眼思索，再轻抬眼回正。",
       "source": {
         "video_id": "V010",
         "original_filename": "IMG_5269.MOV",
         "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
-        "start_s": 0.2,
-        "duration_s": 2.4
+        "start_s": 0.1667,
+        "duration_s": 2.0
       },
-      "working_input_sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+      "source_frames": [
+        3,
+        26
+      ],
+      "sha256": "d62f19531fcd49da5418b04f7e297ccead7a011ee5358863c05497ab214df267",
+      "bytes": 715590,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 3.833,
+      "playback": "return",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          107,
-          126,
-          235,
-          508
-        ],
-        "uniform_scale": 0.610236220472441,
         "display_dimensions_px": [
-          142,
-          310
+          164,
+          282
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.4771,
+        "peak_adjacent_rgb_delta_0_255": 1.7088
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 206705,
-        "all_decoded_frames_checked": 27,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 46,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -128,59 +95,87 @@
       "state": "working",
       "name": "工作",
       "filename": "工作.webm",
-      "sha256": "9db2097ed3a1a926fced4765f4efaf2f98223a84ba017d345cb5076ca0ef33d9",
-      "bytes": 48022,
+      "description": "端坐看向一侧，轻微动耳，陪伴任务运行。",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 4.3333,
+        "duration_s": 1.6667
+      },
+      "source_frames": [
+        53,
+        72
+      ],
+      "sha256": "50219b7f98c8fe864c544fb9083ceed965f541a13585c9f2ed260f3e874d96d2",
+      "bytes": 623459,
       "width": 640,
       "height": 360,
       "fps": 12,
-      "duration_s": 2.416,
-      "source": {
-        "photo_id": "P0912",
-        "original_filename": "IMG_7608.JPG",
-        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
-        "start_s": null,
-        "duration_s": 2.4,
-        "motion": "Still photograph held as working; no generated body motion"
-      },
-      "working_input_sha256": "416700462f5088697b991dfebd16310196da415e2e1a3d86340073385ca1268e",
+      "duration_s": 3.166,
+      "playback": "return",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.44
-        ],
-        "uniform_bbox_px": [
-          136,
-          119,
-          339,
-          326
-        ],
-        "uniform_scale": 0.950920245398773,
         "display_dimensions_px": [
-          322,
-          310
+          164,
+          282
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.2812,
+        "peak_adjacent_rgb_delta_0_255": 0.5417
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 174979,
-        "all_decoded_frames_checked": 29,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 38,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "result",
+      "name": "看结果",
+      "filename": "看结果.webm",
+      "description": "回正后专注地望向前方。",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 9.0833,
+        "duration_s": 0.0833
+      },
+      "source_frames": [
+        110,
+        110
+      ],
+      "sha256": "aa975e659c7c85662b8fd66ad682056e0bb0eacad0dcb0e3d91af9c5137e8d16",
+      "bytes": 25589,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "hold",
+      "preview": "png",
+      "processing": {
+        "display_dimensions_px": [
+          164,
+          282
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 0.0,
+        "peak_adjacent_rgb_delta_0_255": 0.0
+      },
+      "validation": {
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -188,58 +183,43 @@
       "state": "waiting",
       "name": "等你",
       "filename": "等你.webm",
-      "sha256": "32b6a12e4912b5ca110b38e6ba70d09a99b58bf5ae397035e36504a7a49eb389",
-      "bytes": 532648,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 1.833,
+      "description": "趴卧时小幅抬眼，选相似首尾帧自然回环。",
       "source": {
         "video_id": "V026",
         "original_filename": "IMG_6692.MOV",
         "original_sha256": "da8c0b7bb6645346ccb0a890af7d677a4b61619ba60644a5228b10c8aed0fe59",
-        "start_s": 9.4,
-        "duration_s": 2.4
+        "start_s": 10.65,
+        "duration_s": 1.0833
       },
-      "working_input_sha256": "ed7dae7e6f7fc6360ae1f57dc491109e4770dd8d15a02b49aa5a75bed40adebe",
+      "source_frames": [
+        16,
+        28
+      ],
+      "sha256": "0d81c6124c1c275e40b96ccca01ea8eece141d6198109b19bdfa40288b753e47",
+      "bytes": 258520,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.083,
+      "playback": "loop",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          264,
-          36,
-          294,
-          386
-        ],
-        "uniform_scale": 0.8031088082901554,
         "display_dimensions_px": [
-          236,
-          310
+          196,
+          258
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 1.1563,
+        "peak_adjacent_rgb_delta_0_255": 1.021
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 188481,
-        "all_decoded_frames_checked": 22,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 13,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -247,58 +227,131 @@
       "state": "success",
       "name": "庆祝",
       "filename": "庆祝.webm",
-      "sha256": "c5718ac8ae473dc90960a6a8ce32b9305e0037e7335995287de4de28c5550630",
-      "bytes": 521040,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.416,
+      "description": "低伏侧倒，连续翻身收爪，再仰卧停稳。",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 4.0,
-        "duration_s": 2.4
+        "start_s": 13.45,
+        "duration_s": 2.25
       },
-      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "source_frames": [
+        1,
+        27
+      ],
+      "sha256": "27d8d946e0d287c7c3c8f3082678ab24f9f45dba854d0bf6ce94f90d355aa584",
+      "bytes": 418590,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.416,
+      "playback": "once",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          0,
-          18,
-          576,
-          750
-        ],
-        "uniform_scale": 0.41333333333333333,
         "display_dimensions_px": [
-          238,
-          310
+          250,
+          256
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 9.7812,
+        "peak_adjacent_rgb_delta_0_255": 6.7494
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 212945,
         "all_decoded_frames_checked": 29,
-        "every_frame_has_transparency_and_foreground": true
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "alert",
+      "name": "警觉",
+      "filename": "警觉.webm",
+      "description": "耳朵竖起，向另一侧转头，作为报错提醒。",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 9.1667,
+        "duration_s": 1.1667
+      },
+      "source_frames": [
+        111,
+        124
+      ],
+      "sha256": "80572caa933e6a4fd1bf296d27d2d3f2cf5ea793592c74d36c71a756683572a7",
+      "bytes": 255241,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.333,
+      "playback": "once",
+      "preview": "gif",
+      "processing": {
+        "display_dimensions_px": [
+          164,
+          282
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 5.653,
+        "peak_adjacent_rgb_delta_0_255": 3.0473
+      },
+      "validation": {
+        "all_decoded_frames_checked": 16,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "sleep_enter",
+      "name": "入睡",
+      "filename": "入睡.webm",
+      "description": "从清醒的侧卧放低头，接到睡眠循环。",
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 11.8333,
+        "duration_s": 0.9167
+      },
+      "source_frames": [
+        143,
+        153
+      ],
+      "sha256": "238ce454aa6a11b82bab932ce757acf4082ea7511c2197312beef180d4a96408",
+      "bytes": 313638,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.083,
+      "playback": "once",
+      "preview": "gif",
+      "processing": {
+        "display_dimensions_px": [
+          310,
+          214
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 7.3075,
+        "peak_adjacent_rgb_delta_0_255": 2.3663
+      },
+      "validation": {
+        "all_decoded_frames_checked": 13,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -306,58 +359,130 @@
       "state": "sleep",
       "name": "困困",
       "filename": "困困.webm",
-      "sha256": "22d2d1381261ed22530a4b28363538649dfb6d27fa31ffa8b2b685dd391d175b",
-      "bytes": 1507809,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.416,
+      "description": "把下巴放在爪边，保留实拍中轻微的呼吸和耳部变化。",
       "source": {
         "video_id": "V024",
         "original_filename": "IMG_6674.MOV",
         "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
-        "start_s": 11.2,
-        "duration_s": 2.4
+        "start_s": 13.1667,
+        "duration_s": 0.6667
       },
-      "working_input_sha256": "d1971daafc115e2ee2ea3616a513a00370801a8c6ed61d1aadf52ab96d4b0803",
+      "source_frames": [
+        159,
+        166
+      ],
+      "sha256": "4ba1f1b9d743e6f236a3018b1d569c90281b63178b3fc1b3687c6ad43e967c9e",
+      "bytes": 357291,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.166,
+      "playback": "return",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          0,
-          230,
-          432,
-          294
-        ],
-        "uniform_scale": 1.054421768707483,
         "display_dimensions_px": [
-          456,
-          310
+          310,
+          214
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.753,
+        "peak_adjacent_rgb_delta_0_255": 0.9894
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 149638,
-        "all_decoded_frames_checked": 29,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 14,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "sleep_wake",
+      "name": "醒来",
+      "filename": "醒来.webm",
+      "description": "舔一下嘴唇，略抬起头。",
+      "source": {
+        "video_id": "V024",
+        "original_filename": "IMG_6674.MOV",
+        "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
+        "start_s": 3.1667,
+        "duration_s": 1.4167
+      },
+      "source_frames": [
+        39,
+        55
+      ],
+      "sha256": "d416fdbfbc5fef52a1dc2c835ae17223a762efbfa7503a137f064af73f11561d",
+      "bytes": 473037,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.583,
+      "playback": "once",
+      "preview": "gif",
+      "processing": {
+        "display_dimensions_px": [
+          310,
+          214
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 5.3311,
+        "peak_adjacent_rgb_delta_0_255": 1.5898
+      },
+      "validation": {
+        "all_decoded_frames_checked": 19,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "drag",
+      "name": "拎起",
+      "filename": "拎起.webm",
+      "description": "前爪自然垂下，随指针移动。黑侠参考照的 GPT 合成姿态。",
+      "source": {
+        "type": "gpt-image",
+        "reference": "P0595",
+        "image_sha256": "c47653aaac25c0d0830345430e7ccbfe314ac7eb9977dd6dfb26a3bb8432f41f",
+        "motion": "Static lift pose combined with the pointer-driven drag motion"
+      },
+      "source_frames": [
+        1,
+        1
+      ],
+      "sha256": "e2396606e7c4541ad1647331b153695b430ddc40c6fd2efc5363c998680eb5f3",
+      "bytes": 24526,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "hold",
+      "preview": "png",
+      "processing": {
+        "display_dimensions_px": [
+          108,
+          280
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 0.0,
+        "peak_adjacent_rgb_delta_0_255": 0.0
+      },
+      "validation": {
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -365,58 +490,87 @@
       "state": "pet",
       "name": "回应",
       "filename": "回应.webm",
-      "sha256": "4d80d5334ce18bd719569a9977295ecbfe996d1e6790e3de33ed8d101087c3b3",
-      "bytes": 530138,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.583,
+      "description": "侧卧舒展前爪和身体，用于点击回应。",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 34.4,
-        "duration_s": 2.6
+        "start_s": 35.4833,
+        "duration_s": 1.5
       },
-      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "source_frames": [
+        14,
+        31
+      ],
+      "sha256": "6c68546ae8843adebda5212c5f644f1ce611d6172b125e5fe7987a6cffbcc4d4",
+      "bytes": 304756,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.666,
+      "playback": "once",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "System default; exact compute hardware not asserted",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          0,
-          15,
-          576,
-          753
-        ],
-        "uniform_scale": 0.4116865869853918,
         "display_dimensions_px": [
-          236,
-          310
+          214,
+          292
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 6.4981,
+        "peak_adjacent_rgb_delta_0_255": 2.3604
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 214404,
-        "all_decoded_frames_checked": 31,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 20,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "turn",
+      "name": "回头",
+      "filename": "回头.webm",
+      "description": "端坐向右看一会，再转回正面。",
+      "source": {
+        "video_id": "V010",
+        "original_filename": "IMG_5269.MOV",
+        "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
+        "start_s": 2.1667,
+        "duration_s": 7.0
+      },
+      "source_frames": [
+        27,
+        110
+      ],
+      "sha256": "cba848d51372a24fb3c3a6db8176bb3808a2f1266402b6110d64b4a09a71ede8",
+      "bytes": 1406194,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 7.166,
+      "playback": "once",
+      "preview": "gif",
+      "processing": {
+        "display_dimensions_px": [
+          164,
+          282
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 4.4228,
+        "peak_adjacent_rgb_delta_0_255": 3.6169
+      },
+      "validation": {
+        "all_decoded_frames_checked": 86,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
@@ -424,72 +578,51 @@
       "state": "play",
       "name": "巡视",
       "filename": "巡视.webm",
-      "sha256": "cac34da6ea4edf699adb1ea1b9a32663dd56cebb33129f4dbcd8ae10e62a0b9c",
-      "bytes": 336445,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 1.833,
+      "description": "背向镜头向门口走几步。",
       "source": {
         "video_id": "V010",
         "original_filename": "IMG_5269.MOV",
         "original_sha256": "d99f892442333a8d7266aab9cb774fb1608038940d4b1569503b87118bdcd5a6",
         "start_s": 12.9,
-        "duration_s": 1.8
+        "duration_s": 1.8333
       },
-      "working_input_sha256": "af9797e5250219fcde13ef7367c85e3d7f6fff73c50f149021862b0ee9f7a5eb",
+      "source_frames": [
+        1,
+        22
+      ],
+      "sha256": "0a1d0f4c6b1b0223a99717288d240b60714fa9e9e99cee98d706f2c7a03c0cd9",
+      "bytes": 304250,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "once",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
-        "configured_devices": {},
-        "focus_point": [
-          0.6,
-          0.38
-        ],
-        "uniform_bbox_px": [
-          130,
-          164,
-          279,
-          326
-        ],
-        "uniform_scale": 0.950920245398773,
         "display_dimensions_px": [
-          264,
-          310
+          240,
+          280
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 23.7348,
+        "peak_adjacent_rgb_delta_0_255": 4.8371
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 204349,
-        "all_decoded_frames_checked": 22,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
     {
       "state": "belly_rest",
       "name": "仰躺揣爪",
-      "animation_name": "仰躺揣爪",
       "filename": "仰躺揣爪.webm",
-      "sha256": "fae54671304541cd921d034945cc9ef3514eae7c4a8ec3825b3cd4f45abf6b46",
-      "bytes": 34565,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.416,
+      "description": "仰躺露腹，双前爪自然弯曲。",
       "source": {
         "photo_id": "P0235",
         "original_filename": "IMG_20200612_001132.jpg",
@@ -498,178 +631,170 @@
         "duration_s": 2.4,
         "motion": "Still photograph held as belly_rest; no generated body motion"
       },
-      "working_input_sha256": "074b717ae5d7e6bbd8ea0c6083be3d4a0a3e599f3d8cd2ab2dc526369ae52b81",
+      "source_frames": [
+        1,
+        1
+      ],
+      "sha256": "b5d3b406c247355fe093d775d84f75415be5d5fa7a8efcc5016d00a4b529092a",
+      "bytes": 31625,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "hold",
+      "preview": "png",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          85,
-          6,
-          471,
-          645
-        ],
-        "uniform_scale": 0.4806201550387597,
         "display_dimensions_px": [
-          226,
-          310
+          204,
+          280
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.0,
+        "peak_adjacent_rgb_delta_0_255": 0.0
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 196593,
-        "all_decoded_frames_checked": 29,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
     {
       "state": "wash_face",
       "name": "洗脸",
-      "animation_name": "洗脸",
       "filename": "洗脸.webm",
-      "sha256": "1a2d28401c5b6fbe8bb7632f189b5a74d816189da8f0648711bb252bd186ce38",
-      "bytes": 881568,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.0,
+      "description": "抬白前爪擦过脸颊。",
       "source": {
         "video_id": "V002",
         "original_filename": "IMG_3971.MOV",
         "original_sha256": "af8a3de3401488d4ee50b28249e74cda751da984890a72d76d4f8210afbd3bed",
-        "start_s": 25.5,
-        "duration_s": 2.0
+        "start_s": 25.8333,
+        "duration_s": 1.4167
       },
-      "working_input_sha256": "b8623386862ab9be90c38d70c1247c9c14c5f2901b6f08894fde70064f95a23e",
+      "source_frames": [
+        5,
+        21
+      ],
+      "sha256": "615eb6e1646766f806ae3aa9e074a1dc83c35ab4a79fe7652c95e6bd40c24a8a",
+      "bytes": 478838,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 1.583,
+      "playback": "once",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          114,
-          225,
-          401,
-          376
-        ],
-        "uniform_scale": 0.824468085106383,
         "display_dimensions_px": [
-          330,
-          310
+          268,
+          254
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 3.991,
+        "peak_adjacent_rgb_delta_0_255": 3.2454
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 179155,
-        "all_decoded_frames_checked": 24,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 19,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     },
     {
       "state": "tail_sway",
       "name": "轻摆尾巴",
-      "animation_name": "轻摆尾巴",
       "filename": "轻摆尾巴.webm",
-      "sha256": "dd6dd93944c4ef237aa1dacba10ac73b07669a51fc5a112f528eb0c916e6ba5b",
-      "bytes": 736406,
-      "width": 640,
-      "height": 360,
-      "fps": 12,
-      "duration_s": 2.583,
+      "description": "侧卧时尾尖小幅弯摆。",
       "source": {
         "video_id": "V028",
         "original_filename": "IMG_6725.MOV",
         "original_sha256": "d1c0f2f3539a7c6e5b2f8c6443a8649f069d00b1e928e42b4281ca2d720ed66d",
         "start_s": 29.4,
-        "duration_s": 2.6
+        "duration_s": 1.0833
       },
-      "working_input_sha256": "6749739819941032a9038b4e00c13bc82c720acdcc9587edbe21063808a31b36",
+      "source_frames": [
+        1,
+        13
+      ],
+      "sha256": "d2f596a153f7c9effec8b5e2dcbae601a41106df8a5384a4ae410b5d262f5817",
+      "bytes": 419391,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "return",
+      "preview": "gif",
       "processing": {
-        "engine": "Apple Vision VNGenerateForegroundInstanceMaskRequest, local system framework",
-        "device_selection": "Explicit advertised CPU device, if present; otherwise system default (exact hardware not asserted)",
-        "configured_devices": {},
-        "focus_point": [
-          0.5,
-          0.5
-        ],
-        "uniform_bbox_px": [
-          6,
-          90,
-          416,
-          625
-        ],
-        "uniform_scale": 0.496,
         "display_dimensions_px": [
-          206,
-          310
+          168,
+          256
         ],
         "canvas": {
           "width": 640,
           "height": 360,
-          "feet_y": 330,
-          "max_cat_height": 310
+          "feet_y": 330
         },
         "no_mirror": true,
-        "no_stretch": true,
-        "no_subtitles": true,
-        "no_generated_body_motion": true
+        "seam_rgb_delta_0_255": 0.1483,
+        "peak_adjacent_rgb_delta_0_255": 0.4525
       },
       "validation": {
-        "mode_tag": true,
-        "forced_libvpx_decode": true,
-        "minimum": 0,
-        "maximum": 255,
-        "transparent_pixels_first_frame": 198177,
-        "all_decoded_frames_checked": 31,
-        "every_frame_has_transparency_and_foreground": true
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
+      },
+      "full_decode_passed": true
+    },
+    {
+      "state": "loaf",
+      "name": "香箱",
+      "filename": "香箱.webm",
+      "description": "实拍香箱卧姿，双前爪收拢。",
+      "source": {
+        "photo_id": "P0912",
+        "original_filename": "IMG_7608.JPG",
+        "original_sha256": "11b8f30b1d3e04404994f6fd3dc55e34d93c6923ad60459b268d2a4679bde496",
+        "start_s": null,
+        "duration_s": 2.4,
+        "motion": "Still photograph held as working; no generated body motion"
+      },
+      "source_frames": [
+        1,
+        1
+      ],
+      "sha256": "f0510125b0af459ab79004a7cdff7392ec6a34d5e45d413164e2067fd55362fc",
+      "bytes": 34864,
+      "width": 640,
+      "height": 360,
+      "fps": 12,
+      "duration_s": 2.0,
+      "playback": "hold",
+      "preview": "png",
+      "processing": {
+        "display_dimensions_px": [
+          254,
+          244
+        ],
+        "canvas": {
+          "width": 640,
+          "height": 360,
+          "feet_y": 330
+        },
+        "no_mirror": true,
+        "seam_rgb_delta_0_255": 0.0,
+        "peak_adjacent_rgb_delta_0_255": 0.0
+      },
+      "validation": {
+        "all_decoded_frames_checked": 24,
+        "alpha_mode": true
       },
       "full_decode_passed": true
     }
-  ],
-  "remote_services": [],
-  "notes": [
-    "Source originals, private paths, run logs and pre-existing GIFs are not distributed.",
-    "Photos remain static; videos preserve recorded motion without mirroring, retiming or generated body actions.",
-    "Expansion selects simple backgrounds; source/video windows and distinct behaviors are manually reviewed."
-  ],
-  "visual_review": {
-    "reviewed_clips": 11,
-    "sampled_frames": 33,
-    "report": "media_visual_review.json"
-  }
+  ]
 }

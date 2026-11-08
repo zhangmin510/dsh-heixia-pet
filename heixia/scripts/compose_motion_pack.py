@@ -150,6 +150,15 @@ def main():
         settings = plan['sources'][key]
         if settings.get('stabilize_paws'):
             frames = stabilize_paws(frames)
+        for correction in settings.get('camera_alignment', []):
+            first, last = correction['frames']
+            scale = correction['scale']
+            for n in range(first, last + 1):
+                original = frames[n]
+                aligned = Image.new('RGBA', original.size)
+                scaled = tuple(round(dim * scale) for dim in original.size)
+                aligned.paste(original.resize(scaled, Image.Resampling.LANCZOS), tuple(correction['offset_px']))
+                frames[n] = aligned
         box, size = fit(frames.values(), settings['height'])
         fitted[key] = ({n: compose(frame, box, size) for n, frame in frames.items()}, size)
     items = []

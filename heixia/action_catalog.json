@@ -119,7 +119,7 @@
         "start_s": 11.8333,
         "duration_s": 0.9167
       },
-      "sha256": "238ce454aa6a11b82bab932ce757acf4082ea7511c2197312beef180d4a96408"
+      "sha256": "7773fb90ddb769ef3c8e154b4ef5547eb2eeb4a1af198fbb0049dfbc91a22c3d"
     },
     {
       "state": "sleep",
@@ -134,7 +134,7 @@
         "start_s": 13.1667,
         "duration_s": 0.6667
       },
-      "sha256": "4ba1f1b9d743e6f236a3018b1d569c90281b63178b3fc1b3687c6ad43e967c9e"
+      "sha256": "73367d4a216d2973583f133e50c93c15d76b75a66e155ce063bfe4be22f293c1"
     },
     {
       "state": "sleep_wake",
@@ -146,10 +146,10 @@
         "video_id": "V024",
         "original_filename": "IMG_6674.MOV",
         "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
-        "start_s": 3.1667,
-        "duration_s": 1.4167
+        "start_s": 2.75,
+        "duration_s": 1.8333
       },
-      "sha256": "d416fdbfbc5fef52a1dc2c835ae17223a762efbfa7503a137f064af73f11561d"
+      "sha256": "460c1986ad250ecbe5212f7d25d59183ca1e3b409c8f594fd3808c936b25a416"
     },
     {
       "state": "drag",

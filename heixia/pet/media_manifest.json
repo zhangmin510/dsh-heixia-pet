@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "character": "黑侠",
-  "generated_at": "2026-11-09T00:04:35+08:00",
+  "generated_at": "2026-11-09T00:12:36+08:00",
   "items": [
     {
       "state": "idle",
@@ -327,8 +327,8 @@
         143,
         153
       ],
-      "sha256": "238ce454aa6a11b82bab932ce757acf4082ea7511c2197312beef180d4a96408",
-      "bytes": 313638,
+      "sha256": "7773fb90ddb769ef3c8e154b4ef5547eb2eeb4a1af198fbb0049dfbc91a22c3d",
+      "bytes": 333019,
       "width": 640,
       "height": 360,
       "fps": 12,
@@ -337,7 +337,7 @@
       "preview": "gif",
       "processing": {
         "display_dimensions_px": [
-          310,
+          314,
           214
         ],
         "canvas": {
@@ -346,8 +346,8 @@
           "feet_y": 330
         },
         "no_mirror": true,
-        "seam_rgb_delta_0_255": 7.3075,
-        "peak_adjacent_rgb_delta_0_255": 2.3663
+        "seam_rgb_delta_0_255": 7.8632,
+        "peak_adjacent_rgb_delta_0_255": 2.5585
       },
       "validation": {
         "all_decoded_frames_checked": 13,
@@ -371,8 +371,8 @@
         159,
         166
       ],
-      "sha256": "4ba1f1b9d743e6f236a3018b1d569c90281b63178b3fc1b3687c6ad43e967c9e",
-      "bytes": 357291,
+      "sha256": "73367d4a216d2973583f133e50c93c15d76b75a66e155ce063bfe4be22f293c1",
+      "bytes": 380346,
       "width": 640,
       "height": 360,
       "fps": 12,
@@ -381,7 +381,7 @@
       "preview": "gif",
       "processing": {
         "display_dimensions_px": [
-          310,
+          314,
           214
         ],
         "canvas": {
@@ -390,8 +390,8 @@
           "feet_y": 330
         },
         "no_mirror": true,
-        "seam_rgb_delta_0_255": 0.753,
-        "peak_adjacent_rgb_delta_0_255": 0.9894
+        "seam_rgb_delta_0_255": 0.8112,
+        "peak_adjacent_rgb_delta_0_255": 1.0648
       },
       "validation": {
         "all_decoded_frames_checked": 14,
@@ -408,24 +408,24 @@
         "video_id": "V024",
         "original_filename": "IMG_6674.MOV",
         "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
-        "start_s": 3.1667,
-        "duration_s": 1.4167
+        "start_s": 2.75,
+        "duration_s": 1.8333
       },
       "source_frames": [
-        39,
+        34,
         55
       ],
-      "sha256": "d416fdbfbc5fef52a1dc2c835ae17223a762efbfa7503a137f064af73f11561d",
-      "bytes": 473037,
+      "sha256": "460c1986ad250ecbe5212f7d25d59183ca1e3b409c8f594fd3808c936b25a416",
+      "bytes": 622973,
       "width": 640,
       "height": 360,
       "fps": 12,
-      "duration_s": 1.583,
+      "duration_s": 2.0,
       "playback": "once",
       "preview": "gif",
       "processing": {
         "display_dimensions_px": [
-          310,
+          314,
           214
         ],
         "canvas": {
@@ -434,11 +434,11 @@
           "feet_y": 330
         },
         "no_mirror": true,
-        "seam_rgb_delta_0_255": 5.3311,
-        "peak_adjacent_rgb_delta_0_255": 1.5898
+        "seam_rgb_delta_0_255": 7.1278,
+        "peak_adjacent_rgb_delta_0_255": 1.5706
       },
       "validation": {
-        "all_decoded_frames_checked": 19,
+        "all_decoded_frames_checked": 24,
         "alpha_mode": true
       },
       "full_decode_passed": true

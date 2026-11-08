@@ -91,7 +91,20 @@
         "original_filename": "IMG_6674.MOV",
         "original_sha256": "1149c2deee8c6b9bc7a9a45dd7dc6a3982fab16ec4c3e3b28e7157f4e6ddb07b",
         "start_s": 0
-      }
+      },
+      "camera_alignment": [
+        {
+          "frames": [
+            34,
+            55
+          ],
+          "scale": 0.96,
+          "offset_px": [
+            6,
+            40
+          ]
+        }
+      ]
     },
     "drag": {
       "height": 281,
@@ -218,7 +231,7 @@
       "name": "醒来",
       "source": "V024",
       "frames": [
-        39,
+        34,
         55
       ],
       "playback": "once",

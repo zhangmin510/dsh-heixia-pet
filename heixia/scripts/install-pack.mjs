@@ -52,7 +52,7 @@ try {
     installed.push(name);
   }
   await writeFile(join(petDir, 'heixia-install.json'), JSON.stringify({
-    installedAt: new Date().toISOString(), source: 'https://github.com/zhangmin510/dsh-pet',
+    installedAt: new Date().toISOString(), source: 'https://github.com/zhangmin510/dsh-heixia-pet',
     home, names: report.names, replaced, backup: replaced.length ? backup : null,
     automaticChat: true, balance: true,
   }, null, 2) + '\n');

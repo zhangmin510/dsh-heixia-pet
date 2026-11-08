@@ -10,6 +10,7 @@ import tempfile
 from pathlib import Path
 
 HEIXIA = Path(__file__).resolve().parents[1]
+REPOSITORY = 'https://github.com/zhangmin510/dsh-heixia-pet'
 INTEGRITY = 'sha512-oQ/TI5WpRQC27MaaFFP0LSilm+SvXLtav7aD7D9m489myQZzPki/Vxvd07jxP7MH1AnBQ9JPkY1VFhEdYxpIEQ=='
 
 
@@ -63,7 +64,7 @@ def main():
     package['files'] = list(dict.fromkeys(package['files'] + ['heixia', 'assets/logo.svg']))
     package['icon'] = 'assets/logo.svg'
     package['description'] = '黑侠：基于 PC2005-cloud/dsh-pet 的真实黑白猫宠物，支持会话动作、自动聊天及模型余量桥接。'
-    package['heixia'] = {'version': '1.1.0', 'fork': 'https://github.com/zhangmin510/dsh-pet',
+    package['heixia'] = {'version': '1.1.0', 'fork': REPOSITORY,
                         'upstreamVersion': '0.4.5', 'releaseIntegrity': INTEGRITY}
     # The frozen npm artifact has already been built; installing this local directory must not re-run its source prepack.
     package['scripts'] = {key: value for key, value in package.get('scripts', {}).items()

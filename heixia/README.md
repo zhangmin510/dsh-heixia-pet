@@ -49,13 +49,32 @@ GIF/PNG预览与对应WebM的哈希、帧数/时长、循环及裁边参数见[�
 
 克隆仓库后在浏览器打开[动作预览页文件](preview.html)，点击“播放当前”查看新增3种，也可切换全部11种。该页使用同目录相对媒体路径，不依赖网络或fetch；下载时需保留整个heixia目录。
 
-## 本地准备与安装
+## 安装黑侠
+
+### 桌面版
+
+打开 DeepSeek Harness 的 **插件 → 添加插件**，粘贴这个链接，安装后按提示重新加载。黑侠会出现在 Harness 右下角。[版本发布页](https://github.com/zhangmin510/dsh-heixia-pet/releases/tag/heixia-v1.1.0)
+
+```text
+https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz
+```
+
+### 浏览器版
+
+```sh
+dsh plugin --profile web add https://github.com/zhangmin510/dsh-heixia-pet/releases/download/heixia-v1.1.0/dsh-heixia-pet-1.1.0.tgz
+dsh web
+```
+
+安装包已包含 11 个动作与姿态。黑侠与原版沿用同一个 `dsh-pet` 插件标识，一个 profile 只能安装其中一个。桌面版已有原版时，先在插件页移除原版，再安装黑侠。插件继续读取已有的自定义宠物配置。
+
+## 从源码准备开发运行包
 
 需要 Python 3、Node.js 24，以及已初始化的 DeepSeek Harness。播放已经制作好的宠物包无需 Swift 或 FFmpeg。
 
 ```sh
-git clone https://github.com/zhangmin510/dsh-pet.git
-cd dsh-pet
+git clone https://github.com/zhangmin510/dsh-heixia-pet.git
+cd dsh-heixia-pet
 python3 -B heixia/scripts/prepare_runtime.py --install-deps
 node heixia/scripts/verify-pack.mjs heixia/runtime heixia/pet
 node heixia/scripts/install-pack.mjs --plugin-dir heixia/runtime --home ~/.dsh
@@ -68,6 +87,8 @@ node heixia/scripts/install-pack.mjs --plugin-dir heixia/runtime --home ~/.dsh
 浏览器版可用 `dsh plugin --profile web add link:/absolute/path/to/dsh-pet/heixia/runtime --ignore-scripts --workspace-root`，随后 `dsh web`。本地链接目录应保留。安装宠物数据只写所选 `DSH_HOME/dsh-pet/pet/heixia-*`，替换前会备份；其他宠物与宿主模型设置不改动。首次配置隐藏内置蓝鱼，只显示黑侠；已有用户自定义主宠物偏好继续生效。
 
 要在系统桌面显示，可在上游设置中把黑侠“显示位置”改成桌面或两者；上游此模式可能需要另外准备 Electron Helper，本定制默认使用 Harness 内浮层。
+
+维护者可运行 `python3 -B heixia/scripts/build_release.py --output /path/to/release` 生成安装包和 SHA-256 校验文件。已有固定版本的上游 npm 包时可传入 `--tarball /path/to/dsh-pet-0.4.5.tgz`。
 
 ## 验证
 
